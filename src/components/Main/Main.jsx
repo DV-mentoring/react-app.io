@@ -10,10 +10,10 @@ const Main = () => {
       <CssBaseline />
       <Container maxWidth="lg">
         <Box sx={{ height: '10%' }} />
-        <Typography variant="h6" component="h2" sx={{color: 'black', fontFamily: 'Roboto',fontSize: 48, fontWeight: 700}}>
+        <Typography variant="h6" component="h2" sx={{color: 'black', fontFamily: 'Roboto',fontSize: 48, fontWeight: '700'}}>
           Today
         </Typography>
-        <Typography variant="h6" component="h2" sx={{color: 'rgb(65, 65, 65)', fontFamily: 'Roboto',fontSize: 24, fontWeight: 400}}>
+        <Typography variant="h6" component="h2" sx={{color: 'rgb(65, 65, 65)', fontFamily: 'Roboto',fontSize: 24, fontWeight: '400'}}>
           4/6 completed 
         </Typography>
       </Container>
