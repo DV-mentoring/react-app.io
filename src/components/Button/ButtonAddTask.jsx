@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Box, Container, IconButton,Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-export default function ButtonAddTask() {
+export function ButtonAddTask() {
   return (
     <Container >
          <Box sx={{display: 'flex', alignItems: 'center', gap: 1, mt: 1}}>
