@@ -1,16 +1,21 @@
 import { Fragment } from "react";
-import {Header} from './components/Header/Header'
-import {Main} from './components/Main/Main'
-import {Todo} from './components/Todo/Todo'
-import {ButtonAddTask} from './components/Button/ButtonAddTask'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";import {Header} from './components/Header/Header'
+import {Sidebar} from './components/Sidebar/Sidebar'
+import {Today} from './components/Todo/Today'
+import {Yesterday} from "./components/Todo/Yesterday";
+import {Upcoming} from  "./components/Todo/Upcoming"
+
 function App() {
   return (
       <Fragment>
-          <Header/>
-          <Main/>
-          <Todo/>
-          <ButtonAddTask/>
-
+        <Router>
+            <Sidebar/>
+            <Routes>
+                <Route path="/" element={<Today />} />
+                <Route path="/Yesterday" element={<Yesterday />} />
+                <Route path="/Upcoming" element={<Upcoming />} />
+            </Routes>
+        </Router>
       </Fragment>
   );
 }

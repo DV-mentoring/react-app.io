@@ -1,5 +1,5 @@
 import React from "react";
-import {Main} from "../Main/Main";
+import {TodoList} from "../Main/TodoList";
 import {Container, Card, Typography,CardContent,IconButton,Box,Checkbox} from '@mui/material'
 import {useState} from "react";
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
@@ -12,6 +12,7 @@ const Todo = () => {
         { id: 1, title: "Task 1", description: "Description of task 1", isActive: true },
         { id: 2, title: "Task 2", description: "Description of task 2", isActive: false },
         { id: 3, title: "Task 3", description: "Description of task 3", isActive: true },
+        { id: 4, title: "Task 1", description: "Description of task 1", isActive: true },
 
     ]);
 
@@ -26,7 +27,7 @@ const Todo = () => {
 
     return (
         <Container>
-            <Main tasks={tasks} />
+            <TodoList tasks={tasks} />
             {tasks.map((task) => (
                 <TodoTask
                     key={task.id}
@@ -92,5 +93,5 @@ const TodoTask = ({task, onToggle}) => {
      );
 };
 
-
+export {TodoTask};
 export {Todo};
