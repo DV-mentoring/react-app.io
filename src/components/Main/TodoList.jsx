@@ -1,15 +1,12 @@
 import {Fragment} from 'react';
-import {useParams} from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-const TodoList = ({ tasks = [] }) => {
-    const {day} = useParams();
+const TodoList = ({ tasks = [], day }) => {
     const completedTasks = tasks.filter(task => task.isActive).length;
     const totalTasks = tasks.length;
-
     return (
         <Fragment>
             <CssBaseline />

@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Отрисовка количества выполненных Todo">
-      <change afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Todo/Today.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Todo/Upcoming.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Todo/Yesterday.jsx" afterDir="false" />
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Создание sidebar, роутинга">
+      <change afterPath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todo/Today.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +45,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="Изменение экспорта" />
-        <option name="rewordedMessage" value="Отрисовка количества выполненных Todo" />
+        <option name="originalMessage" value="Создание sidebar, роутинга" />
+        <option name="rewordedMessage" value="Создание sidebar, роутинга" />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="6178bfbb12f2b7e78fe36299289a2edf6bdf8d9c" />
+    <option name="onto" value="e0e9e471f3c94c94a80c95346e19e32b3ef80b7c" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -99,6 +96,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Node.js.App.jsx.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "#3 on dev",
@@ -141,7 +139,15 @@
       <workItem from="1733162820426" duration="2508000" />
       <workItem from="1733220608021" duration="5481000" />
       <workItem from="1733234150596" duration="2295000" />
-      <workItem from="1733294062398" duration="12325000" />
+      <workItem from="1733294062398" duration="12964000" />
+      <workItem from="1733309070928" duration="503000" />
+      <workItem from="1733312851317" duration="678000" />
+      <workItem from="1733315207020" duration="510000" />
+      <workItem from="1733476918588" duration="1821000" />
+      <workItem from="1733490045985" duration="3960000" />
+      <workItem from="1733500096192" duration="57000" />
+      <workItem from="1733591661659" duration="10000" />
+      <workItem from="1734085901387" duration="13378000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -175,7 +181,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733225568401</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Создание sidebar, роутинга">
+      <option name="closed" value="true" />
+      <created>1733307707215</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733307707215</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Создание sidebar, роутинга">
+      <option name="closed" value="true" />
+      <created>1733307838824</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733307838824</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Создание sidebar, роутинга">
+      <option name="closed" value="true" />
+      <created>1733307880062</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733307880062</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,16 +226,7 @@
     <MESSAGE value="Изменение логики header" />
     <MESSAGE value="Изменение экспорта" />
     <MESSAGE value="Отрисовка количества выполненных Todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Отрисовка количества выполненных Todo" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Main/TodoList.jsx</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Создание sidebar, роутинга" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание sidebar, роутинга" />
   </component>
 </project>
