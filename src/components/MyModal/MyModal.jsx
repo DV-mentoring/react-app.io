@@ -2,30 +2,27 @@ import React, {useState} from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import {Button, TextField} from "@mui/material";
-export const MyModal = ({openModal, handleModalClose}) => {
+export const MyModal = ({addTask, openModal, handleModalClose}) => {
 
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
 
     const handleChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value } = e.target;
 
-        if(name === 'taskName'){
+        if (name === 'taskName') {
             setTaskName(value);
         } else {
             setDescription(value);
         }
-    }
+    };
 
-    // Буду делать сохранение задач
-    const handleSave = () => {
+    const handleCreateTask = () => {
         if (taskName && description) {
-            const newTask = {
-                id: Date.now(),
-                title: taskName,
-                description: description,
-                isActive: true,
-            }
+            addTask(taskName, description);
+            setTaskName('');
+            setDescription('');
+            handleModalClose();
         }
     };
 
@@ -66,7 +63,7 @@ export const MyModal = ({openModal, handleModalClose}) => {
                     />
 
                     <Box sx={{display: 'flex', justifyContent: 'center', gap: 1, mt: 2}}>
-                        <Button variant="outlined" color="error" onClick={handleSave}>Создать</Button>
+                        <Button variant="outlined" color="error" onClick={handleCreateTask}>Создать</Button>
                         <Button variant="outlined" color="error" onClick={handleModalClose}>Закрыть</Button>
                     </Box>
 

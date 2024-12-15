@@ -25,6 +25,24 @@ const Todo = () => {
         );
     };
 
+    const addTask = (title,description) => {
+        const todoTask = {
+            id: Date.now(),
+            title,
+            description,
+            isActive: true,
+        }
+        let newTask = setTasks((prevTasks) => [...prevTasks, todoTask]);
+    }
+
+    // const deleteTask = () => {
+    //
+    // }
+    //
+    // const toggleTask = () => {
+    //
+    // }
+
     return (
         <Container>
             <TodoList tasks={tasks} />
@@ -43,6 +61,7 @@ const TodoTask = ({task, onToggle}) => {
     
     return ( 
         <Container>
+
             <Box
                 sx={{
                     display: "flex",
