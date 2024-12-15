@@ -67,7 +67,7 @@ const TodoTask = ({task, onToggle}) => {
                 <CardContent>
                 <Box sx={{display: "grid", gridTemplateColumns: "1fr auto", alignItems: "start", gap: 2}}>
                     <Box>
-                    <Typography gutterBottom variant="h5" component="div" sx={{fontFamily: 'Roboto', fontSize: '24px', fontWeight: '500'}}>
+                    <Typography gutterBottom variant="h5" component="div" sx={{fontSize: '24px', fontWeight: '500'}}>
                         {task.title}
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>

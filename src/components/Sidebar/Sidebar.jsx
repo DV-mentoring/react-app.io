@@ -1,5 +1,9 @@
 import * as React from 'react';
 import {useState} from "react";
+import { Routes, Route } from "react-router-dom";
+import { TodoListView } from "../Todo/TodoListView";
+import { Yesterday } from "../Todo/Yesterday";
+import { Upcoming } from "../Todo/Upcoming";
 import { Link } from "react-router-dom";
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -21,8 +25,12 @@ import ListItemText from '@mui/material/ListItemText';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import UpcomingIcon from '@mui/icons-material/Upcoming';
+import {ButtonAddTask} from "../Button/ButtonAddTask";
+import {MyModal} from "../MyModal/MyModal";
 
 const drawerWidth = 240;
+
+
 
 const openedMixin = (theme) => ({
     width: drawerWidth,
@@ -106,6 +114,9 @@ export function Sidebar() {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [day, setDay] = useState(["/","/Yesterday","/Upcoming"]);
+    const [openModal, setOpenModal] = useState(false);
+
+    const handleModalClose = () => setOpenModal(!openModal);
 
 
     const handleDrawerOpen = () => {
@@ -296,7 +307,13 @@ export function Sidebar() {
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
                 <Typography sx={{ marginBottom: 2 }}>
-
+                    <Routes>
+                        <Route path="/" element={<TodoListView day={"Today"}/>} />
+                        <Route path="/Yesterday" element={<TodoListView day={"Yesterday"}/>} />
+                        <Route path="/Upcoming" element={<TodoListView day={"Upcoming"}/>} />
+                    </Routes>
+                    <ButtonAddTask setOpenModal={setOpenModal} />
+                    <MyModal openModal={openModal} handleModalClose={handleModalClose} />
                 </Typography>
             </Box>
         </Box>

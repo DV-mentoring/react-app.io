@@ -3,7 +3,7 @@ import {Container} from "@mui/material";
 import {TodoList} from "../Main/TodoList";
 import {TodoTask} from "./Todo";
 
-const Today = () => {
+const TodoListView = ({day,saveTask}) => {
     const [tasks, setTasks] = useState([
         { id: 1, title: "Task 1", description: "Description of task 1", isActive: true },
         { id: 2, title: "Task 2", description: "Description of task 2", isActive: false },
@@ -23,16 +23,17 @@ const Today = () => {
 
     return (
         <Container>
-            <TodoList tasks={tasks} />
+            <TodoList tasks={tasks} day={day}/>
             {tasks.map((task) => (
                 <TodoTask
                     key={task.id}
                     task={task}
                     onToggle={toggleTaskStatus}
+                    OnSave={saveTask}
                 />
             ))}
         </Container>
     );
 };
 
-export {Today};
+export {TodoListView};
