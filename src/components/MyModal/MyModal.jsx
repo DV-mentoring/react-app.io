@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import {Button, TextField} from "@mui/material";
-export const MyModal = ({openModal, handleModal}) => {
+export const MyModal = ({openModal, handleModalClose}) => {
 
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
@@ -45,7 +45,7 @@ export const MyModal = ({openModal, handleModal}) => {
         <div>
             <Modal
                 open={openModal}
-                onClose={handleModal}
+                onClose={handleModalClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
@@ -67,7 +67,7 @@ export const MyModal = ({openModal, handleModal}) => {
 
                     <Box sx={{display: 'flex', justifyContent: 'center', gap: 1, mt: 2}}>
                         <Button variant="outlined" color="error" onClick={handleSave}>Создать</Button>
-                        <Button variant="outlined" color="error" onClick={handleModal}>Закрыть</Button>
+                        <Button variant="outlined" color="error" onClick={handleModalClose}>Закрыть</Button>
                     </Box>
 
                 </Box>

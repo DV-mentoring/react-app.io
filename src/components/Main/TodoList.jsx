@@ -15,14 +15,14 @@ const TodoList = ({ tasks = [], day }) => {
                 <Typography
                     variant="h6"
                     component="h2"
-                    sx={{ color: 'black', fontFamily: 'Roboto', fontSize: 48, fontWeight: '700' }}
+                    sx={{ color: 'black', fontSize: 48, fontWeight: '700' }}
                 >
                     {day}
                 </Typography>
                 <Typography
                     variant="h6"
                     component="h2"
-                    sx={{ color: 'rgb(65, 65, 65)', fontFamily: 'Roboto', fontSize: 24, fontWeight: '400' }}
+                    sx={{ color: 'rgb(65, 65, 65)', fontSize: 24, fontWeight: '400' }}
                 >
                     {completedTasks}/{totalTasks} completed
                 </Typography>

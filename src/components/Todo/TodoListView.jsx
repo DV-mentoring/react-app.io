@@ -29,7 +29,7 @@ const TodoListView = ({day,saveTask}) => {
                     key={task.id}
                     task={task}
                     onToggle={toggleTaskStatus}
-                    save={saveTask}
+                    OnSave={saveTask}
                 />
             ))}
         </Container>

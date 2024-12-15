@@ -116,7 +116,7 @@ export function Sidebar() {
     const [day, setDay] = useState(["/","/Yesterday","/Upcoming"]);
     const [openModal, setOpenModal] = useState(false);
 
-    const handleModal = () => setOpenModal(!openModal);
+    const handleModalClose = () => setOpenModal(!openModal);
 
 
     const handleDrawerOpen = () => {
@@ -313,7 +313,7 @@ export function Sidebar() {
                         <Route path="/Upcoming" element={<TodoListView day={"Upcoming"}/>} />
                     </Routes>
                     <ButtonAddTask setOpenModal={setOpenModal} />
-                    <MyModal openModal={openModal} handleModal={handleModal} />
+                    <MyModal openModal={openModal} handleModalClose={handleModalClose} />
                 </Typography>
             </Box>
         </Box>
