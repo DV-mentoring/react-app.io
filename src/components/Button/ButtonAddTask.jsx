@@ -7,6 +7,7 @@ import AddIcon from '@mui/icons-material/Add';
 export function ButtonAddTask({ setOpenModal }) {
     const handleModalOpen = () => {
         setOpenModal(true);
+        console.log('edit')
     }
 
     return (

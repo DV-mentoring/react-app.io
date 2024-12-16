@@ -25,8 +25,6 @@ import ListItemText from '@mui/material/ListItemText';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import UpcomingIcon from '@mui/icons-material/Upcoming';
-import {ButtonAddTask} from "../Button/ButtonAddTask";
-import {MyModal} from "../MyModal/MyModal";
 
 const drawerWidth = 240;
 
@@ -110,14 +108,11 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export function Sidebar({ addTask }) {
+export function Sidebar() {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
     const [day, setDay] = useState(["/","/Yesterday","/Upcoming"]);
-    const [openModal, setOpenModal] = useState(false);
 
-
-    const handleModalClose = () => setOpenModal(!openModal);
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -310,8 +305,6 @@ export function Sidebar({ addTask }) {
                         <Route path="/Yesterday" element={<TodoListView day={"Yesterday"}/>} />
                         <Route path="/Upcoming" element={<TodoListView day={"Upcoming"}/>} />
                     </Routes>
-                    <ButtonAddTask setOpenModal={setOpenModal} />
-                    <MyModal addTask={addTask} openModal={openModal} handleModalClose={handleModalClose} />
                 </Typography>
             </Box>
         </Box>
