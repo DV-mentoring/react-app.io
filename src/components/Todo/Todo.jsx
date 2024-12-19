@@ -84,11 +84,11 @@ const TodoTask = ({task, onToggle, deleteTask,handleEditModalOpen}) => {
 
           <Box sx={{display: "flex", flexDirection: "row", gap: 1}}>
                 <Typography variant="h5" component="h2"> 
-                    <IconButton>
-                        <EditIcon onClick={handleEditModalOpen} sx={{margin: "10px"}}/>
+                    <IconButton onClick={handleEditModalOpen}>
+                        <EditIcon sx={{margin: "10px"}}/>
                         </IconButton>
-                        <IconButton>
-                   <DeleteIcon onClick={() => deleteTask(task.id)} />
+                        <IconButton onClick={() => deleteTask(task.id)}>
+                   <DeleteIcon />
                     </IconButton>
                 </Typography>
                 </Box>

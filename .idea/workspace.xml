@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Добавление удаления/создания задачи">
+      <change afterPath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" afterDir="false" />
     </list>
@@ -27,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="b97981d68bed07096ca13b64db170fe7c41d9276" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,12 +40,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="Изменение экспорта" />
-        <option name="rewordedMessage" value="Отрисовка количества выполненных Todo" />
+        <option name="originalMessage" value="Добавление удаления/создания задачи" />
+        <option name="rewordedMessage" value="Добавление удаления/создания задачи" />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="6178bfbb12f2b7e78fe36299289a2edf6bdf8d9c" />
+    <option name="onto" value="7a94f661c52226142b125a2ead8bde775f126afa" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -58,7 +57,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="feature/tasksAdd" />
-                    <option name="lastUsedInstant" value="1734257383" />
+                    <option name="lastUsedInstant" value="1734441406" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -147,7 +146,11 @@
       <workItem from="1734243506440" duration="1874000" />
       <workItem from="1734271819506" duration="709000" />
       <workItem from="1734347698425" duration="11178000" />
-      <workItem from="1734426024566" duration="6994000" />
+      <workItem from="1734426024566" duration="7511000" />
+      <workItem from="1734434885217" duration="75000" />
+      <workItem from="1734439355354" duration="2061000" />
+      <workItem from="1734454608520" duration="60000" />
+      <workItem from="1734617295083" duration="3748000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -197,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734364905875</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавление удаления/создания задачи">
+      <option name="closed" value="true" />
+      <created>1734434300167</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734434300167</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
