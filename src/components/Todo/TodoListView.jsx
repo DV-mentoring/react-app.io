@@ -1,9 +1,11 @@
-import React, {useState} from "react";
-import {Container} from "@mui/material";
+import React, { useState} from "react";
+import { Container} from "@mui/material";
 import {TodoList} from "../Main/TodoList";
 import {TodoTask} from "./Todo";
+import {ButtonAddTask} from "../Button/ButtonAddTask";
+import {EditMyModal, MyModal} from "../MyModal/MyModal";
 
-const TodoListView = ({day,saveTask}) => {
+const TodoListView = ({day}) => {
     const [tasks, setTasks] = useState([
         { id: 1, title: "Task 1", description: "Description of task 1", isActive: true },
         { id: 2, title: "Task 2", description: "Description of task 2", isActive: false },
@@ -11,12 +13,49 @@ const TodoListView = ({day,saveTask}) => {
         { id: 4, title: "Task 1", description: "Description of task 1", isActive: true },
 
     ]);
+    const [openModal, setOpenModal] = useState(false);
+    const [openEditModal, setEditModal] = useState(false);
+    const [currentTask, setCurrentTask] = useState({})
+    const handleModalClose = () => setOpenModal(!openModal);
+
+    const addTask = (title,description) => {
+        const todoTask = {
+            id: Date.now(),
+            title,
+            description,
+            isActive: false,
+        }
+        setTasks((prevTasks) => [...prevTasks, todoTask]);
+    }
+
+    const deleteTask = (id) => {
+        setTasks([...tasks.filter((task) => task.id !== id)])
+    }
+
 
 
     const toggleTaskStatus = (id) => {
         setTasks(prevTasks =>
             prevTasks.map(task =>
-                task.id === id ? { ...task, isActive: !task.isActive } : task
+                task.id === id ? { ...task, isActive: !task.isActive }  : task
+            )
+        );
+    };
+
+    const handleEditModalOpen = (task) => {
+        setCurrentTask(task);
+        setEditModal(true);
+    }
+
+    const handleEditModalClose = () => {
+        setEditModal(false);
+        setCurrentTask(null)
+    }
+
+    const updateTask = (updatedTask) => {
+        setTasks(prevTasks =>
+            prevTasks.map(task =>
+                task.id === updatedTask.id ? updatedTask : task
             )
         );
     };
@@ -29,9 +68,19 @@ const TodoListView = ({day,saveTask}) => {
                     key={task.id}
                     task={task}
                     onToggle={toggleTaskStatus}
-                    OnSave={saveTask}
+                    deleteTask={deleteTask}
+                    handleEditModalOpen={() => handleEditModalOpen(task)}
                 />
             ))}
+            <MyModal addTask={addTask} openModal={openModal} handleModalClose={handleModalClose} />
+            <ButtonAddTask setOpenModal={setOpenModal} />
+            {currentTask && (
+                <EditMyModal
+                    openModal={openEditModal}
+                    handleModalClose={handleEditModalClose}
+                    task={currentTask}
+                    updateTask={updateTask}/>
+            )}
         </Container>
     );
 };
