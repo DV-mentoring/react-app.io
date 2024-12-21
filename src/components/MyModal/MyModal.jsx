@@ -1,33 +1,43 @@
-import React, {useState} from 'react';
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
+import React, {useEffect, useState} from "react";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
 import {Button, TextField} from "@mui/material";
-export const MyModal = ({openModal, handleModalClose}) => {
 
-    const [taskName, setTaskName] = useState('');
-    const [description, setDescription] = useState('');
+
+
+export const MyModal = ({openModal, handleModalClose, onSubmit, initalTask}) => {
+
+    const [taskName, setTaskName] = useState(initalTask?.title || '');
+    const [description, setDescription] = useState(initalTask?.description || '');
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+        setTaskName(initalTask?.title || '');
+        setDescription(initalTask?.description || '');
+    }, [initalTask]);
 
     const handleChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value } = e.target;
 
-        if(name === 'taskName'){
+        if (name === 'taskName') {
             setTaskName(value);
         } else {
             setDescription(value);
         }
-    }
-
-    // Буду делать сохранение задач
-    const handleSave = () => {
-        if (taskName && description) {
-            const newTask = {
-                id: Date.now(),
-                title: taskName,
-                description: description,
-                isActive: true,
-            }
-        }
     };
+
+    const handleSaveTask = () => {
+        if (!taskName.trim()) {
+            setError(true);
+            return;
+        }
+        setError(false);
+        onSubmit({ ...initalTask, title: taskName, description });
+        handleModalClose();
+    };
+
+    const isEditMode = Boolean(initalTask?.id);
+
 
 
     const style = {
@@ -54,6 +64,8 @@ export const MyModal = ({openModal, handleModalClose}) => {
                                id="fullWidth" sx={{ pb: 2 }}
                                value={taskName}
                                onChange={handleChange}
+                               error={error}
+                               helperText={error ? "Название задачи не может быть пустым, напиши что-то" : ""}
                                name="taskName"
                     />
 
@@ -66,7 +78,9 @@ export const MyModal = ({openModal, handleModalClose}) => {
                     />
 
                     <Box sx={{display: 'flex', justifyContent: 'center', gap: 1, mt: 2}}>
-                        <Button variant="outlined" color="error" onClick={handleSave}>Создать</Button>
+                        <Button variant="outlined" color="error" onClick={handleSaveTask}>
+                            {isEditMode ? "Редактировать" : "Создать"}
+                        </Button>
                         <Button variant="outlined" color="error" onClick={handleModalClose}>Закрыть</Button>
                     </Box>
 
