@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Создание sidebar, роутинга">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Создание функции редактирования задач">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="b97981d68bed07096ca13b64db170fe7c41d9276" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,12 +40,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="Изменение экспорта" />
-        <option name="rewordedMessage" value="Отрисовка количества выполненных Todo" />
+        <option name="originalMessage" value="Добавление удаления/создания задачи" />
+        <option name="rewordedMessage" value="Добавление удаления/создания задачи" />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="6178bfbb12f2b7e78fe36299289a2edf6bdf8d9c" />
+    <option name="onto" value="7a94f661c52226142b125a2ead8bde775f126afa" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -63,12 +56,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/modal" />
-                    <option name="lastUsedInstant" value="1734183001" />
+                    <option name="branchName" value="feature/tasksAdd" />
+                    <option name="lastUsedInstant" value="1734441406" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1733154089" />
+                    <option name="lastUsedInstant" value="1734256979" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/modal" />
+                    <option name="lastUsedInstant" value="1734183001" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -104,7 +101,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#4 on feature/modal&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#5 on feature/tasksAdd&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/admin/.ssh/react-app.io/src/components/Todo&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -147,6 +144,15 @@
       <workItem from="1733294062398" duration="12325000" />
       <workItem from="1734183735101" duration="187000" />
       <workItem from="1734243506440" duration="1874000" />
+      <workItem from="1734271819506" duration="709000" />
+      <workItem from="1734347698425" duration="11178000" />
+      <workItem from="1734426024566" duration="7511000" />
+      <workItem from="1734434885217" duration="75000" />
+      <workItem from="1734439355354" duration="2061000" />
+      <workItem from="1734454608520" duration="60000" />
+      <workItem from="1734617295083" duration="4207000" />
+      <workItem from="1734710558344" duration="1130000" />
+      <workItem from="1734774989480" duration="3328000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -180,7 +186,39 @@
       <option name="project" value="LOCAL" />
       <updated>1733225568401</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Функционал добавления/удаления задачи">
+      <option name="closed" value="true" />
+      <created>1734260367471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734260367471</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Добавление удаления/создания задачи">
+      <option name="closed" value="true" />
+      <created>1734364905875</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734364905875</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавление удаления/создания задачи">
+      <option name="closed" value="true" />
+      <created>1734434300167</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1734434300167</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Создание функции редактирования задач">
+      <option name="closed" value="true" />
+      <created>1734622634734</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1734622634734</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +229,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/tasksAdd" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -201,6 +251,19 @@
     <MESSAGE value="Изменение логики header" />
     <MESSAGE value="Изменение экспорта" />
     <MESSAGE value="Отрисовка количества выполненных Todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Отрисовка количества выполненных Todo" />
+    <MESSAGE value="Функционал добавления/удаления задачи" />
+    <MESSAGE value="Добавление удаления/создания задачи" />
+    <MESSAGE value="Создание функции редактирования задач" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание функции редактирования задач" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Main/TodoList.jsx</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
