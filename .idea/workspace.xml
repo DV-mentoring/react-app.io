@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Создание функции редактирования задач">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Добавление JSONplaceholder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="b97981d68bed07096ca13b64db170fe7c41d9276" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,20 +56,24 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature/pagination" />
+                    <option name="lastUsedInstant" value="1735797003" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1735796576" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/fetch-api" />
+                    <option name="lastUsedInstant" value="1735132912" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="feature/tasksAdd" />
                     <option name="lastUsedInstant" value="1734441406" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1734256979" />
-                  </RecentBranch>
-                  <RecentBranch>
                     <option name="branchName" value="feature/modal" />
                     <option name="lastUsedInstant" value="1734183001" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1733154088" />
                   </RecentBranch>
                 </list>
               </option>
@@ -101,7 +105,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#5 on feature/tasksAdd&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/pagination&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/admin/.ssh/react-app.io/src/components/Todo&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -153,6 +157,13 @@
       <workItem from="1734617295083" duration="4207000" />
       <workItem from="1734710558344" duration="1130000" />
       <workItem from="1734774989480" duration="3328000" />
+      <workItem from="1735227963066" duration="12000" />
+      <workItem from="1735309483778" duration="4191000" />
+      <workItem from="1735319631695" duration="1034000" />
+      <workItem from="1735394944525" duration="3000" />
+      <workItem from="1735796264149" duration="446000" />
+      <workItem from="1735796714757" duration="6534000" />
+      <workItem from="1735810765365" duration="2307000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -218,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734622634734</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Добавление JSONplaceholder">
+      <option name="closed" value="true" />
+      <created>1735133040125</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735133040125</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +254,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature/tasksAdd" />
+                        <option value="origin/dev" />
                       </list>
                     </value>
                   </entry>
@@ -254,16 +273,7 @@
     <MESSAGE value="Функционал добавления/удаления задачи" />
     <MESSAGE value="Добавление удаления/создания задачи" />
     <MESSAGE value="Создание функции редактирования задач" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание функции редактирования задач" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Main/TodoList.jsx</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Добавление JSONplaceholder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление JSONplaceholder" />
   </component>
 </project>

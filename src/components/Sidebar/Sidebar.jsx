@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { TodoListView } from "../Todo/TodoListView";
 import { Yesterday } from "../Todo/Yesterday";
 import { Upcoming } from "../Todo/Upcoming";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -151,8 +151,8 @@ export function Sidebar() {
                     </IconButton>
                 </DrawerHeader>
                 <Divider />
-                <List>
-                        <ListItem disablePadding sx={{ display: 'block' }} component={Link} to="/" >
+                <List >
+                        <ListItem disablePadding sx={{ display: 'block', textDecoration: 'none', color: 'grey', '&.active': { color: '#FF4F5A' } }} component={NavLink} to="/" >
                             <ListItemButton
                                 sx={[
                                     {
@@ -181,6 +181,9 @@ export function Sidebar() {
                                             : {
                                                 mr: 'auto',
                                             },
+                                        {
+                                            '&.active': { color: '#FF4F5A' }
+                                        },
                                     ]}
                                 >
                                     <CalendarTodayIcon />
@@ -199,7 +202,7 @@ export function Sidebar() {
                                 />
                             </ListItemButton>
                         </ListItem>
-                    <ListItem disablePadding sx={{ display: 'block' }} component={Link} to="/Yesterday">
+                    <ListItem disablePadding sx={{ display: 'block' ,textDecoration: 'none', color: 'grey', '&.active': { color: '#FF4F5A' }}} component={NavLink} to="/Yesterday">
                         <ListItemButton
                             sx={[
                                 {
@@ -228,6 +231,9 @@ export function Sidebar() {
                                         : {
                                             mr: 'auto',
                                         },
+                                    {
+                                        '&.active': { color: '#FF4F5A' }
+                                    },
                                 ]}
                             >
                                 <CalendarMonthIcon />
@@ -246,7 +252,7 @@ export function Sidebar() {
                             />
                         </ListItemButton>
                     </ListItem>
-                    <ListItem disablePadding sx={{ display: 'block' }} component={Link} to="/Upcoming">
+                    <ListItem disablePadding sx={{ display: 'block', textDecoration: 'none', color: 'grey', '&.active': { color: '#FF4F5A' }}} component={NavLink} to="/Upcoming">
                         <ListItemButton
                             sx={[
                                 {
@@ -275,6 +281,9 @@ export function Sidebar() {
                                         : {
                                             mr: 'auto',
                                         },
+                                    {
+                                        '&.active': { color: '#FF4F5A' }
+                                    },
                                 ]}
                             >
                                 <UpcomingIcon />
