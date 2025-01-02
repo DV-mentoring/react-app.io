@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import { Container} from "@mui/material";
 import {TodoList} from "../Main/TodoList";
 import {TodoTask} from "./Todo";
@@ -7,12 +7,22 @@ import { MyModal} from "../MyModal/MyModal";
 
 const TodoListView = ({day}) => {
     const [tasks, setTasks] = useState([
-        { id: 1, title: "Task 1", description: "Description of task 1", isActive: true },
-        { id: 2, title: "Task 2", description: "Description of task 2", isActive: false },
-        { id: 3, title: "Task 3", description: "Description of task 3", isActive: true },
-        { id: 4, title: "Task 1", description: "Description of task 1", isActive: true },
 
     ]);
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/todos")
+            .then((response) => response.json())
+            .then((data) => {
+                const formattedTasks = data.slice(0, 10).map((task) => ({
+                    id: task.id,
+                    title: task.title,
+                    isActive: !task.completed,
+                }));
+                setTasks(formattedTasks);
+            })
+            .catch((error) => console.log(error));
+    }, []);
+
     const [openEditModal, setEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState({})
 
