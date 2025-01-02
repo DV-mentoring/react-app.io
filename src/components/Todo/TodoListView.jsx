@@ -12,8 +12,11 @@ const TodoListView = ({day}) => {
 
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=10`)
-            .then((response) => response.json())
-            .then((data) => {
+            .then((response) => {
+                const totalCount = response.headers.get("X-Total-Count");
+                return response.json().then((data) => ({ data, totalCount }));
+            })
+            .then(({ data, totalCount }) => {
                 const formattedTasks = data.map((task) => ({
                     id: task.id,
                     title: task.title,
@@ -21,11 +24,12 @@ const TodoListView = ({day}) => {
                     isActive: !task.completed,
                 }));
                 setTasks(formattedTasks);
-                const totalPages = Math.ceil(200 / 10);
+                const totalPages = Math.ceil(totalCount / 10);
                 setPageQty(totalPages);
             })
             .catch((error) => console.log(error));
     }, [page]);
+
 
     const [openEditModal, setEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState({})
