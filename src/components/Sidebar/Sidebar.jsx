@@ -111,7 +111,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export function Sidebar() {
     const theme = useTheme();
     const [open, setOpen] = useState(false);
-    const [day, setDay] = useState(["/","/Yesterday","/Upcoming"]);
 
     const handleDrawerOpen = () => {
         setOpen(true);

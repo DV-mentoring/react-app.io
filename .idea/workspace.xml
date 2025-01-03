@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Добавление пагинации, стилизация сайдбара">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Исправление бага useEffect">
+      <change afterPath="$PROJECT_DIR$/src/service/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" afterDir="false" />
@@ -19,6 +20,7 @@
       <list>
         <option value="CSS File" />
         <option value="JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -105,7 +107,7 @@
     "Node.js.TodoListView.jsx.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/pagination",
+    "git-widget-placeholder": "#8 on feature/pagination",
     "last_opened_file_path": "/Users/admin/.ssh/react-app.io/src/components/Todo",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -163,7 +165,8 @@
       <workItem from="1735394944525" duration="3000" />
       <workItem from="1735796264149" duration="446000" />
       <workItem from="1735796714757" duration="6534000" />
-      <workItem from="1735810765365" duration="3300000" />
+      <workItem from="1735810765365" duration="3771000" />
+      <workItem from="1735885446191" duration="1405000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -245,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735813247155</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Исправление бага useEffect">
+      <option name="closed" value="true" />
+      <created>1735814314874</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1735814314874</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +273,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/dev" />
+                        <option value="feature/pagination" />
                       </list>
                     </value>
                   </entry>
@@ -283,6 +294,7 @@
     <MESSAGE value="Создание функции редактирования задач" />
     <MESSAGE value="Добавление JSONplaceholder" />
     <MESSAGE value="Добавление пагинации, стилизация сайдбара" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление пагинации, стилизация сайдбара" />
+    <MESSAGE value="Исправление бага useEffect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление бага useEffect" />
   </component>
 </project>

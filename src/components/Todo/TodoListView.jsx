@@ -4,6 +4,7 @@ import {TodoList} from "../Main/TodoList";
 import {TodoTask} from "./Todo";
 import {ButtonAddTask} from "../Button/ButtonAddTask";
 import { MyModal} from "../MyModal/MyModal";
+import {fetchTodos} from "../../service/Api";
 
 const TodoListView = ({day}) => {
     const [tasks, setTasks] = useState([]);
@@ -11,23 +12,17 @@ const TodoListView = ({day}) => {
     const [pageQty, setPageQty] = useState(0);
 
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/todos?_page=${page}&_limit=10`)
-            .then((response) => {
-                const totalCount = response.headers.get("X-Total-Count");
-                return response.json().then((data) => ({ data, totalCount }));
-            })
-            .then(({ data, totalCount }) => {
-                const formattedTasks = data.map((task) => ({
-                    id: task.id,
-                    title: task.title,
-                    date: new Date(),
-                    isActive: !task.completed,
-                }));
-                setTasks(formattedTasks);
-                const totalPages = Math.ceil(totalCount / 10);
+        const fetchData = async () => {
+            try {
+                const {tasks, totalCount} = await fetchTodos(page);
+                setTasks(tasks);
+                const totalPages = Math.ceil(totalCount / 10)
                 setPageQty(totalPages);
-            })
-            .catch((error) => console.log(error));
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchData();
     }, [page]);
 
 
