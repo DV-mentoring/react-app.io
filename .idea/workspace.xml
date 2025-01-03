@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Исправление бага useEffect">
-      <change afterPath="$PROJECT_DIR$/src/service/Api.js" afterDir="false" />
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Создание отдельного сервиса для Api">
+      <change afterPath="$PROJECT_DIR$/src/Helpers/FilteredTasks.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JSX File" />
         <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -166,7 +165,7 @@
       <workItem from="1735796264149" duration="446000" />
       <workItem from="1735796714757" duration="6534000" />
       <workItem from="1735810765365" duration="3771000" />
-      <workItem from="1735885446191" duration="1405000" />
+      <workItem from="1735885446191" duration="1761000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -256,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735814314874</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Создание отдельного сервиса для Api">
+      <option name="closed" value="true" />
+      <created>1735886901331</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1735886901331</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +302,7 @@
     <MESSAGE value="Добавление JSONplaceholder" />
     <MESSAGE value="Добавление пагинации, стилизация сайдбара" />
     <MESSAGE value="Исправление бага useEffect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправление бага useEffect" />
+    <MESSAGE value="Создание отдельного сервиса для Api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание отдельного сервиса для Api" />
   </component>
 </project>
