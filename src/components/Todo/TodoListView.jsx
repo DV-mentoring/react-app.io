@@ -5,26 +5,26 @@ import {TodoTask} from "./Todo";
 import {ButtonAddTask} from "../Button/ButtonAddTask";
 import { MyModal} from "../MyModal/MyModal";
 import {fetchTodos} from "../../service/Api";
-import {getFilteredTasks} from "../../Helpers/FilteredTasks";
+import {filteredTasksByDay} from "../../Helpers/Helpers";
 
 const TodoListView = ({day}) => {
     const [tasks, setTasks] = useState([]);
-    const [page,setPage] = useState(1);
-    const [pageQty, setPageQty] = useState(0);
+    const [currentPage,setCurrentPage] = useState(1);
+    const [quantityPage, setQuantityPage] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const {tasks, totalCount} = await fetchTodos(page);
+                const {tasks, totalCount} = await fetchTodos(currentPage);
                 setTasks(tasks);
                 const totalPages = Math.ceil(totalCount / 10)
-                setPageQty(totalPages);
+                setQuantityPage(totalPages);
             } catch (error) {
                 console.log(error);
             }
         };
         fetchData();
-    }, [page]);
+    }, [currentPage]);
 
 
     const [openEditModal, setEditModal] = useState(false);
@@ -68,7 +68,7 @@ const TodoListView = ({day}) => {
         }
     };
 
-    const filteredTasks = getFilteredTasks(tasks,day)
+    const filteredTasks = filteredTasksByDay(tasks,day)
 
     return (
         <Container>
@@ -85,9 +85,9 @@ const TodoListView = ({day}) => {
             <ButtonAddTask setOpenModal={() => handleModalOpen()}/>
             <Pagination
                 variant="outlined"
-                count={pageQty}
-                page={page}
-                onChange={(_, num) => setPage(num)}
+                count={quantityPage}
+                page={currentPage}
+                onChange={(_, num) => setCurrentPage(num)}
                 sx={{display: 'flex', justifyContent: "center", mt: 2, paddingRight: "5%"}}
             />
             <MyModal openModal={openEditModal}

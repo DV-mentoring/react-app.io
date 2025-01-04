@@ -1,4 +1,4 @@
-export const getFilteredTasks = (tasks, day) => {
+export const filteredTasksByDay = (tasks, day) => {
     const today = new Date();
     return tasks.filter((task) => {
         const taskDate = new Date(task.date);

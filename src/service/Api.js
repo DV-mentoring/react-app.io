@@ -1,8 +1,8 @@
-const API_URL = 'https://jsonplaceholder.typicode.com/';
+const BASE_URL = 'https://jsonplaceholder.typicode.com/';
 
-export const fetchTodos = async (page, limit = 10) => {
+export const fetchTodos = async (currentPage, limit = 10) => {
     try {
-        const response = await fetch(`${API_URL}/todos?_page=${page}&_limit=${limit}`);
+        const response = await fetch(`${BASE_URL}/todos?_page=${currentPage}&_limit=${limit}`);
         if (!response.ok) {
             throw new Error('Error fetching todos');
         }
