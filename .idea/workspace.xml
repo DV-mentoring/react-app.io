@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Рефакторинг filteredTasks">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение наименования функций">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Helpers/FilteredTasks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helpers/FilteredTasks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,7 @@
       <workItem from="1735796714757" duration="6534000" />
       <workItem from="1735810765365" duration="3771000" />
       <workItem from="1735885446191" duration="2889000" />
-      <workItem from="1736013543560" duration="944000" />
+      <workItem from="1736013543560" duration="1315000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -273,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735887287324</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Изменение наименования функций">
+      <option name="closed" value="true" />
+      <created>1736014824305</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1736014824305</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +319,7 @@
     <MESSAGE value="Исправление бага useEffect" />
     <MESSAGE value="Создание отдельного сервиса для Api" />
     <MESSAGE value="Рефакторинг filteredTasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Рефакторинг filteredTasks" />
+    <MESSAGE value="Изменение наименования функций" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменение наименования функций" />
   </component>
 </project>

@@ -5,7 +5,7 @@ import {TodoTask} from "./Todo";
 import {ButtonAddTask} from "../Button/ButtonAddTask";
 import { MyModal} from "../MyModal/MyModal";
 import {fetchTodos} from "../../service/Api";
-import {filteredTasksByDay} from "../../Helpers/Helpers";
+import {filteredTasksByDay} from "../../Helpers/helpers";
 
 const TodoListView = ({day}) => {
     const [tasks, setTasks] = useState([]);
