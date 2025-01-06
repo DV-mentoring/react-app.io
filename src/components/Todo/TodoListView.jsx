@@ -1,18 +1,32 @@
-import React, { useState} from "react";
-import { Container} from "@mui/material";
+import React, { useState, useEffect} from "react";
+import {Container, Pagination} from "@mui/material";
 import {TodoList} from "../Main/TodoList";
 import {TodoTask} from "./Todo";
 import {ButtonAddTask} from "../Button/ButtonAddTask";
 import { MyModal} from "../MyModal/MyModal";
+import {fetchTodos} from "../../service/Api";
+import {filteredTasksByDay} from "../../Helpers/helpers";
 
 const TodoListView = ({day}) => {
-    const [tasks, setTasks] = useState([
-        { id: 1, title: "Task 1", description: "Description of task 1", isActive: true },
-        { id: 2, title: "Task 2", description: "Description of task 2", isActive: false },
-        { id: 3, title: "Task 3", description: "Description of task 3", isActive: true },
-        { id: 4, title: "Task 1", description: "Description of task 1", isActive: true },
+    const [tasks, setTasks] = useState([]);
+    const [currentPage,setCurrentPage] = useState(1);
+    const [quantityPage, setQuantityPage] = useState(0);
 
-    ]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const {tasks, totalCount} = await fetchTodos(currentPage);
+                setTasks(tasks);
+                const totalPages = Math.ceil(totalCount / 10)
+                setQuantityPage(totalPages);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchData();
+    }, [currentPage]);
+
+
     const [openEditModal, setEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState({})
 
@@ -31,7 +45,7 @@ const TodoListView = ({day}) => {
         );
     };
 
-    const handleModalOpen = (task = null) => {
+    const handleModalOpen = (task = {title: '', date: new Date()}) => {
         setCurrentTask(task);
         setEditModal(true);
     }
@@ -54,11 +68,12 @@ const TodoListView = ({day}) => {
         }
     };
 
+    const filteredTasks = filteredTasksByDay(tasks,day)
 
     return (
         <Container>
-            <TodoList tasks={tasks} day={day}/>
-            {tasks.map((task) => (
+            <TodoList tasks={filteredTasks} day={day}/>
+            {filteredTasks.map((task) => (
                 <TodoTask
                     key={task.id}
                     task={task}
@@ -68,6 +83,13 @@ const TodoListView = ({day}) => {
                 />
             ))}
             <ButtonAddTask setOpenModal={() => handleModalOpen()}/>
+            <Pagination
+                variant="outlined"
+                count={quantityPage}
+                page={currentPage}
+                onChange={(_, num) => setCurrentPage(num)}
+                sx={{display: 'flex', justifyContent: "center", mt: 2, paddingRight: "5%"}}
+            />
             <MyModal openModal={openEditModal}
                      handleModalClose={handleModalClose}
                      initalTask={currentTask || {}}
@@ -75,6 +97,7 @@ const TodoListView = ({day}) => {
 
         </Container>
     );
+
 };
 
 export {TodoListView};

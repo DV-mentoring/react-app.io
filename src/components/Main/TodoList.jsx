@@ -4,9 +4,10 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-const TodoList = ({ tasks = [], day }) => {
+const TodoList = ({ tasks = [], day}) => {
     const completedTasks = tasks.filter(task => task.isActive).length;
     const totalTasks = tasks.length;
+
     return (
         <Fragment>
             <CssBaseline />
@@ -19,13 +20,13 @@ const TodoList = ({ tasks = [], day }) => {
                 >
                     {day}
                 </Typography>
-                <Typography
-                    variant="h6"
-                    component="h2"
-                    sx={{ color: 'rgb(65, 65, 65)', fontSize: 24, fontWeight: '400' }}
-                >
-                    {completedTasks}/{totalTasks} completed
-                </Typography>
+                    <Typography
+                        variant="h6"
+                        component="h2"
+                        sx={{ color: 'rgb(65, 65, 65)', fontSize: 24, fontWeight: '400',mt:2}}
+                    >
+                        {completedTasks}/{totalTasks} completed
+                    </Typography>
             </Container>
         </Fragment>
     );
