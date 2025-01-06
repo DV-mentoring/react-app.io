@@ -1,27 +1,31 @@
 import React, { useState, useEffect} from "react";
-import { Container} from "@mui/material";
+import {Container, Pagination} from "@mui/material";
 import {TodoList} from "../Main/TodoList";
 import {TodoTask} from "./Todo";
 import {ButtonAddTask} from "../Button/ButtonAddTask";
 import { MyModal} from "../MyModal/MyModal";
+import {fetchTodos} from "../../service/Api";
+import {filteredTasksByDay} from "../../Helpers/helpers";
 
 const TodoListView = ({day}) => {
-    const [tasks, setTasks] = useState([
+    const [tasks, setTasks] = useState([]);
+    const [currentPage,setCurrentPage] = useState(1);
+    const [quantityPage, setQuantityPage] = useState(0);
 
-    ]);
     useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/todos")
-            .then((response) => response.json())
-            .then((data) => {
-                const formattedTasks = data.slice(0, 10).map((task) => ({
-                    id: task.id,
-                    title: task.title,
-                    isActive: !task.completed,
-                }));
-                setTasks(formattedTasks);
-            })
-            .catch((error) => console.log(error));
-    }, []);
+        const fetchData = async () => {
+            try {
+                const {tasks, totalCount} = await fetchTodos(currentPage);
+                setTasks(tasks);
+                const totalPages = Math.ceil(totalCount / 10)
+                setQuantityPage(totalPages);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        fetchData();
+    }, [currentPage]);
+
 
     const [openEditModal, setEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState({})
@@ -41,7 +45,7 @@ const TodoListView = ({day}) => {
         );
     };
 
-    const handleModalOpen = (task = null) => {
+    const handleModalOpen = (task = {title: '', date: new Date()}) => {
         setCurrentTask(task);
         setEditModal(true);
     }
@@ -64,11 +68,12 @@ const TodoListView = ({day}) => {
         }
     };
 
+    const filteredTasks = filteredTasksByDay(tasks,day)
 
     return (
         <Container>
-            <TodoList tasks={tasks} day={day}/>
-            {tasks.map((task) => (
+            <TodoList tasks={filteredTasks} day={day}/>
+            {filteredTasks.map((task) => (
                 <TodoTask
                     key={task.id}
                     task={task}
@@ -78,6 +83,13 @@ const TodoListView = ({day}) => {
                 />
             ))}
             <ButtonAddTask setOpenModal={() => handleModalOpen()}/>
+            <Pagination
+                variant="outlined"
+                count={quantityPage}
+                page={currentPage}
+                onChange={(_, num) => setCurrentPage(num)}
+                sx={{display: 'flex', justifyContent: "center", mt: 2, paddingRight: "5%"}}
+            />
             <MyModal openModal={openEditModal}
                      handleModalClose={handleModalClose}
                      initalTask={currentTask || {}}
@@ -85,6 +97,7 @@ const TodoListView = ({day}) => {
 
         </Container>
     );
+
 };
 
 export {TodoListView};
