@@ -1,18 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import {Container} from "@mui/material";
 import {TodoList} from "../Main/TodoList";
 import {TodoTask} from "./Todo";
 
 
-const Yesterday = () => {
-    const [tasks, setTasks] = useState([
-        { id: 1, title: "Task 1", description: "Description of task 1", isActive: true },
-        { id: 2, title: "Task 2", description: "Description of task 2", isActive: false },
-        { id: 3, title: "Task 3", description: "Description of task 3", isActive: true },
-        { id: 4, title: "Task 1", description: "Description of task 1", isActive: true },
-
-    ]);
-
+const Yesterday = ({tasks, setTasks}) => {
 
     const toggleTaskStatus = (id) => {
         setTasks(prevTasks =>
