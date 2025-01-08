@@ -2,8 +2,6 @@ import * as React from 'react';
 import {useState} from "react";
 import { Routes, Route } from "react-router-dom";
 import { TodoListView } from "../Todo/TodoListView";
-import { Yesterday } from "../Todo/Yesterday";
-import { Upcoming } from "../Todo/Upcoming";
 import { NavLink } from "react-router-dom";
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
