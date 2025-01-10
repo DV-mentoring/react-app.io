@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение наименования функций">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение наименования файлов">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,6 +165,8 @@
       <workItem from="1735810765365" duration="3771000" />
       <workItem from="1735885446191" duration="2889000" />
       <workItem from="1736013543560" duration="1315000" />
+      <workItem from="1736054234015" duration="67000" />
+      <workItem from="1736185880844" duration="825000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -278,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736014824305</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Изменение наименования файлов">
+      <option name="closed" value="true" />
+      <created>1736054287021</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1736054287021</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +330,7 @@
     <MESSAGE value="Создание отдельного сервиса для Api" />
     <MESSAGE value="Рефакторинг filteredTasks" />
     <MESSAGE value="Изменение наименования функций" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменение наименования функций" />
+    <MESSAGE value="Изменение наименования файлов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменение наименования файлов" />
   </component>
 </project>

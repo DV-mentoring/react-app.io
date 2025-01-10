@@ -12,24 +12,42 @@ const TodoList = ({ tasks = [], day}) => {
         <Fragment>
             <CssBaseline />
             <Container maxWidth="lg">
-                <Box sx={{ height: '10%' }} />
+                <Box sx={{ height: "10%" }} />
                 <Typography
                     variant="h6"
                     component="h2"
-                    sx={{ color: 'black', fontSize: 48, fontWeight: '700' }}
+                    sx={{
+                        color: "black",
+                        fontSize: 48,
+                        fontWeight: "700",
+                        mb: 2,
+                    }}
                 >
                     {day}
                 </Typography>
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        mt: 2,
+                    }}
+                >
                     <Typography
                         variant="h6"
                         component="h2"
-                        sx={{ color: 'rgb(65, 65, 65)', fontSize: 24, fontWeight: '400',mt:2}}
+                        sx={{
+                            color: "rgb(65, 65, 65)",
+                            fontSize: 24,
+                            fontWeight: "400",
+                        }}
                     >
                         {completedTasks}/{totalTasks} completed
                     </Typography>
+                </Box>
             </Container>
         </Fragment>
     );
-}
+};
 
 export {TodoList};
