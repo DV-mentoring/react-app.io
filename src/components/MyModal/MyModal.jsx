@@ -39,18 +39,6 @@ export const MyModal = ({openModal, handleModalClose, onSubmit, initalTask}) => 
     const isEditMode = Boolean(initalTask?.id);
 
 
-
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 600,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
-    };
     return (
         <div>
             <Modal
@@ -59,9 +47,9 @@ export const MyModal = ({openModal, handleModalClose, onSubmit, initalTask}) => 
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
-                    <TextField fullWidth label="Название"
-                               id="fullWidth" sx={{ pb: 2 }}
+                <Box className='modal-window'>
+                    <TextField className='text-field-modal' fullWidth label="Название"
+                               id="fullWidth"
                                value={taskName}
                                onChange={handleChange}
                                error={error}
@@ -77,7 +65,7 @@ export const MyModal = ({openModal, handleModalClose, onSubmit, initalTask}) => 
                                name="description"
                     />
 
-                    <Box sx={{display: 'flex', justifyContent: 'center', gap: 1, mt: 2}}>
+                    <Box className='box-modal'>
                         <Button variant="outlined" color="error" onClick={handleSaveTask}>
                             {isEditMode ? "Редактировать" : "Создать"}
                         </Button>

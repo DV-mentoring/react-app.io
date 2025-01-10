@@ -86,10 +86,10 @@ const TodoListView = ({ day }) => {
 
     return (
         <Container>
-            <Box sx={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
+            <TodoList tasks={filteredTasks} day={day} />
+            <Box className='box-select-button'>
                 <SelectFilterButton onFilterChange={selectFilter} filter={filter} />
             </Box>
-            <TodoList tasks={filteredTasks} day={day} />
             {filteredTasks.map((task) => (
                 <TodoTask
                     key={task.id}
@@ -101,11 +101,11 @@ const TodoListView = ({ day }) => {
             ))}
             <ButtonAddTask setOpenModal={() => handleModalOpen()} />
             <Pagination
+                className='pagination'
                 variant="outlined"
                 count={quantityPage}
                 page={currentPage}
                 onChange={(_, num) => setCurrentPage(num)}
-                sx={{ display: "flex", justifyContent: "center", mt: 2, paddingRight: "5%" }}
             />
             <MyModal
                 openModal={openEditModal}

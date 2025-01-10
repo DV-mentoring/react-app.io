@@ -11,38 +11,22 @@ export function SelectFilterButton({ onFilterChange, filter }) {
             size="small"
             variant="contained"
             aria-label="Basic button group"
-            sx={{
-                "& .MuiButtonGroup-grouped": {
-                    borderRight: "1px solid #ffffff",
-                    "&:last-of-type": {
-                        borderRight: "none",
-                    },
-                },
-            }}
+            className='button-group'
         >
             <Button
-                sx={{
-                    backgroundColor: "#FF4F5A",
-                    "&:hover": { backgroundColor: "#e3444e" },
-                }}
+               className='button-filter'
                 onClick={() => onFilterChange("all")}
             >
                 All
             </Button>
             <Button
-                sx={{
-                    backgroundColor: "#FF4F5A",
-                    "&:hover": { backgroundColor: "#e3444e" },
-                }}
+                className='button-filter'
                 onClick={() => onFilterChange("active")}
             >
                 Active
             </Button>
             <Button
-                sx={{
-                    backgroundColor: "#FF4F5A",
-                    "&:hover": { backgroundColor: "#e3444e" },
-                }}
+                className='button-filter'
                 onClick={() => onFilterChange("completed")}
             >
                 Completed

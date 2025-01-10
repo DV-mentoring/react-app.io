@@ -16,35 +16,18 @@ const TodoList = ({ tasks = [], day}) => {
                 <Typography
                     variant="h6"
                     component="h2"
-                    sx={{
-                        color: "black",
-                        fontSize: 48,
-                        fontWeight: "700",
-                        mb: 2,
-                    }}
+                    className='day-title'
                 >
                     {day}
                 </Typography>
-                <Box
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        mt: 2,
-                    }}
-                >
+
                     <Typography
                         variant="h6"
                         component="h2"
-                        sx={{
-                            color: "rgb(65, 65, 65)",
-                            fontSize: 24,
-                            fontWeight: "400",
-                        }}
+                        className='title-completedTask'
                     >
                         {completedTasks}/{totalTasks} completed
                     </Typography>
-                </Box>
             </Container>
         </Fragment>
     );

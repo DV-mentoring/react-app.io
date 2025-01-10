@@ -4,8 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение наименования файлов">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение наименования функций">
+      <change afterPath="$PROJECT_DIR$/src/styles/_buttonAddTask.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_myModal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_selectFilterButton.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_todoList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_todoListView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_todoTask.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/sidebar.styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/SelectFilterButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/SelectFilterButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +37,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="JSX File" />
+        <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -54,6 +76,10 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature/scss-migration" />
+                    <option name="lastUsedInstant" value="1736318237" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="feature/pagination" />
                     <option name="lastUsedInstant" value="1735797003" />
                   </RecentBranch>
@@ -68,10 +94,6 @@
                   <RecentBranch>
                     <option name="branchName" value="feature/tasksAdd" />
                     <option name="lastUsedInstant" value="1734441406" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/modal" />
-                    <option name="lastUsedInstant" value="1734183001" />
                   </RecentBranch>
                 </list>
               </option>
@@ -104,9 +126,9 @@
     &quot;Node.js.TodoListView.jsx.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#8 on feature/pagination&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/scss-migration&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/admin/.ssh/react-app.io/src/components/Todo&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -120,6 +142,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/Todo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -165,8 +191,9 @@
       <workItem from="1735810765365" duration="3771000" />
       <workItem from="1735885446191" duration="2889000" />
       <workItem from="1736013543560" duration="1315000" />
-      <workItem from="1736054234015" duration="67000" />
-      <workItem from="1736185880844" duration="825000" />
+      <workItem from="1736318099359" duration="14965000" />
+      <workItem from="1736344212793" duration="3130000" />
+      <workItem from="1736491237772" duration="13406000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -280,15 +307,7 @@
       <option name="project" value="LOCAL" />
       <updated>1736014824305</updated>
     </task>
-    <task id="LOCAL-00015" summary="Изменение наименования файлов">
-      <option name="closed" value="true" />
-      <created>1736054287021</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1736054287021</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +324,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature/pagination" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>
@@ -330,7 +349,6 @@
     <MESSAGE value="Создание отдельного сервиса для Api" />
     <MESSAGE value="Рефакторинг filteredTasks" />
     <MESSAGE value="Изменение наименования функций" />
-    <MESSAGE value="Изменение наименования файлов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменение наименования файлов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменение наименования функций" />
   </component>
 </project>

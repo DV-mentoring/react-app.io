@@ -1,0 +1,69 @@
+.box-sidebar.MuiBox-root {
+  display: flex;
+}
+
+.app-bar.MuiPaper-elevation {
+  background-color: $color-light-grey;
+}
+
+.button-app-bar {
+
+  &--hidden {
+    display: none !important;
+  }
+}
+
+.list-item {
+  display: block;
+  text-decoration: none;
+  color: $color-light-grey;
+  &.active {
+    color: $color-primary;
+  }
+}
+
+.list-item-button.MuiButtonBase-root {
+  justify-content: center;
+  min-height: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &--hidden {
+    justify-content: center;
+  }
+
+  &.open {
+  justify-content: initial;
+  }
+}
+
+.list-icon.MuiListItemIcon-root {
+  min-width: 0;
+  justify-content: center;
+
+  &.open {
+    margin-right: 24px;
+  }
+
+  &--hidden {
+    margin-right: auto;
+  }
+
+  &.active {
+    color: $color-primary;
+  }
+}
+
+.list-text {
+  &.open {
+    opacity: 1;
+  }
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+.main-box {
+  flex-grow: 1;
+  padding: 24px;
+}
