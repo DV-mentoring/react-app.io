@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Box, Container, Pagination } from "@mui/material";
-import { TodoList } from "../Main/TodoList";
-import { TodoTask } from "./Todo";
-import { ButtonAddTask } from "../Button/ButtonAddTask";
-import { MyModal } from "../MyModal/MyModal";
-import { fetchTodos } from "../../service/Api";
-import { filteredTasksByDay } from "../../Helpers/helpers";
-import { SelectFilterButton } from "../Button/SelectFilterButton";
+import { TodoStats } from "../todo-stats/TodoStats";
+import { TodoTask } from "../../entities/todo/Todo";
+import { ButtonAddTask } from "../../shared/ui/button/add-button/ButtonAddTask";
+import { MyModal } from "../../shared/ui/modal/MyModal";
+import { fetchTodos } from "../../shared/api/api";
+import { filteredTasksByDay } from "../helpers/helpers";
+import { SelectFilterButton } from "../../shared/ui/button/select-button/SelectFilterButton";
 
-const TodoListView = ({ day }) => {
+const TodoList = ({ day }) => {
     const [tasks, setTasks] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [quantityPage, setQuantityPage] = useState(0);
@@ -86,7 +86,7 @@ const TodoListView = ({ day }) => {
 
     return (
         <Container>
-            <TodoList tasks={filteredTasks} day={day} />
+            <TodoStats tasks={filteredTasks} day={day} />
             <Box className='box-select-button'>
                 <SelectFilterButton onFilterChange={selectFilter} filter={filter} />
             </Box>
@@ -117,4 +117,4 @@ const TodoListView = ({ day }) => {
     );
 };
 
-export { TodoListView };
+export { TodoList };

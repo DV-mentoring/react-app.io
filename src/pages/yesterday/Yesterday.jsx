@@ -1,10 +1,10 @@
 import React from "react";
 import {Container} from "@mui/material";
-import {TodoList} from "../Main/TodoList";
-import {TodoTask} from "./Todo";
+import {TodoStats} from "../../features/todo-stats/TodoStats";
+import {TodoTask} from "../../entities/todo/Todo";
 
 
-const Upcoming = ({ tasks, setTasks }) => {
+const Yesterday = ({tasks, setTasks}) => {
 
     const toggleTaskStatus = (id) => {
         setTasks(prevTasks =>
@@ -16,7 +16,7 @@ const Upcoming = ({ tasks, setTasks }) => {
 
     return (
         <Container>
-            <TodoList tasks={tasks} />
+            <TodoStats tasks={tasks} />
             {tasks.map((task) => (
                 <TodoTask
                     key={task.id}
@@ -28,4 +28,4 @@ const Upcoming = ({ tasks, setTasks }) => {
     );
 };
 
-export {Upcoming};
+export {Yesterday};
