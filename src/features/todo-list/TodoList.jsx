@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Container, Pagination } from "@mui/material";
 import { TodoStats } from "../todo-stats/TodoStats";
-import { TodoTask } from "../../entities/todo/Todo";
+import { TodoTask } from "../../shared/ui/todo/Todo";
 import { ButtonAddTask } from "../../shared/ui/button/add-button/ButtonAddTask";
 import { MyModal } from "../../shared/ui/modal/MyModal";
 import { fetchTodos } from "../../shared/api/api";

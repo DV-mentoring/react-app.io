@@ -4,29 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Внедрение SCSS, изменение стилей">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Внедрение архитектуры FSD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/ButtonAddTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/button/add-button/ButtonAddTask.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/SelectFilterButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/button/select-button/SelectFilterButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-stats/TodoStats.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MyModal/MyModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/modal/MyModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/sidebar/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/todo/Todo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo/TodoListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo/Upcoming.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/upcoming/Upcoming.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Todo/Yesterday.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/yesterday/Yesterday.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_buttonAddTask.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/button/add-button/_buttonAddTask.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_myModal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/modal/_myModal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_selectFilterButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/button/select-button/_selectFilterButton.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/sidebar/_sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_todoList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-stats/_todoStats.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_todoListView.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/_todoList.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/_todoTask.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/todo/_todoTask.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/sidebar.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/sidebar/model/sidebar.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/todo/Todo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/todo/_todoTask.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/todo/_todoTask.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/upcoming/Upcoming.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/upcoming/Upcoming.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/yesterday/Yesterday.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/yesterday/Yesterday.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/sidebar/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/sidebar/_sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/sidebar/model/sidebar.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/sidebar/model/sidebar.styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +115,7 @@
     "Node.js.TodoListView.jsx.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/fsd-architecture",
+    "git-widget-placeholder": "#15 on feature/fsd-architecture",
     "last_opened_file_path": "/Users/admin/.ssh/react-app.io/src/components/Todo",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
@@ -144,11 +133,11 @@
       <recent name="$PROJECT_DIR$/src/components/Todo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/shared/ui" />
+      <recent name="$PROJECT_DIR$/src/features/helpers" />
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/pages/upcoming" />
       <recent name="$PROJECT_DIR$/src/pages/yesterday" />
-      <recent name="$PROJECT_DIR$/src/widgets/sidebar/model" />
-      <recent name="$PROJECT_DIR$/src/shared/ui/modal" />
-      <recent name="$PROJECT_DIR$/src/widgets/sidebar" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -197,7 +186,8 @@
       <workItem from="1736318099359" duration="14965000" />
       <workItem from="1736344212793" duration="3130000" />
       <workItem from="1736491237772" duration="13885000" />
-      <workItem from="1736765257004" duration="2903000" />
+      <workItem from="1736765257004" duration="3328000" />
+      <workItem from="1736771297086" duration="2139000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -319,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736511677379</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Внедрение архитектуры FSD">
+      <option name="closed" value="true" />
+      <created>1736768430351</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1736768430351</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +360,7 @@
     <MESSAGE value="Рефакторинг filteredTasks" />
     <MESSAGE value="Изменение наименования функций" />
     <MESSAGE value="Внедрение SCSS, изменение стилей" />
-    <option name="LAST_COMMIT_MESSAGE" value="Внедрение SCSS, изменение стилей" />
+    <MESSAGE value="Внедрение архитектуры FSD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Внедрение архитектуры FSD" />
   </component>
 </project>

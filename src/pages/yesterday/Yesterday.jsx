@@ -1,7 +1,7 @@
 import React from "react";
 import {Container} from "@mui/material";
 import {TodoStats} from "../../features/todo-stats/TodoStats";
-import {TodoTask} from "../../entities/todo/Todo";
+import {TodoTask} from "../../shared/ui/todo/Todo";
 
 
 const Yesterday = ({tasks, setTasks}) => {
