@@ -1,0 +1,59 @@
+.box-task {
+  display: flex;
+  align-items: center;
+}
+
+.icon-task-box {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.checkbox-task {
+ &.MuiCheckbox-colorPrimary {
+   color: $color-primary;
+&.Mui-checked {
+  color: $color-primary;
+}
+}
+}
+
+.card {
+  max-height: 90px;
+  width: 1051px;
+  margin-top: 22px;
+  box-sizing: border-box;
+  border: 1px solid rgb(227, 227, 227);
+  border-radius: 8px;
+}
+
+.card-content-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 16px;
+}
+
+.decoration-box {
+  text-decoration: none;
+  opacity: 1;
+
+  &.active {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+}
+
+.title-todo-task {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.description-todo-task {
+  color: $color-secondary;
+}
+
+.icon-task {
+  margin: 10px;
+}
+

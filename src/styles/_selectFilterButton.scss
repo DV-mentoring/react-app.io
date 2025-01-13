@@ -1,0 +1,18 @@
+.button-group.MuiButtonGroup-root {
+    .MuiButtonGroup-grouped {
+      border-right: 1px solid #ffffff;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+}
+
+
+.button-filter.MuiButton-root {
+  background-color: $color-primary;
+
+  &:hover {
+    background-color: $color-hover;
+  }
+}

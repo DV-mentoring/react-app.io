@@ -1,0 +1,20 @@
+.MuiBox-root.box-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.MuiButtonBase-root.button {
+  background-color: $color-primary;
+  margin-top: 8px;
+
+  &:hover {
+    background-color: $color-hover;
+  }
+}
+
+.MuiTypography-root.title-button {
+  font-size: 24px;
+  margin-top: 8px;
+}
