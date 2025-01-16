@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Внедрение архитектуры FSD">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение структуры FSD">
+      <change afterPath="$PROJECT_DIR$/src/app/store/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store/tasks.action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store/tasks.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store/tasks.selector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/todo/Todo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/todo/_todoTask.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/todo/_todoTask.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/upcoming/Upcoming.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/upcoming/Upcoming.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/yesterday/Yesterday.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/yesterday/Yesterday.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/sidebar/Sidebar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/sidebar/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/sidebar/_sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/sidebar/model/sidebar.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/sidebar/model/sidebar.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +46,12 @@
   <component name="GitRewordedCommitMessages">
     <option name="commitMessagesMapping">
       <RewordedCommitMessageMapping>
-        <option name="originalMessage" value="Добавление удаления/создания задачи" />
-        <option name="rewordedMessage" value="Добавление удаления/создания задачи" />
+        <option name="originalMessage" value="Изменение структуры FSD" />
+        <option name="rewordedMessage" value="Изменение структуры FSD" />
       </RewordedCommitMessageMapping>
     </option>
     <option name="currentCommit" value="1" />
-    <option name="onto" value="7a94f661c52226142b125a2ead8bde775f126afa" />
+    <option name="onto" value="b9f59754ec960244970468f0d21a667dce37110d" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -65,12 +62,16 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/fsd-architecture" />
-                    <option name="lastUsedInstant" value="1736765729" />
+                    <option name="branchName" value="feature/redux-add" />
+                    <option name="lastUsedInstant" value="1737031226" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1736765695" />
+                    <option name="lastUsedInstant" value="1737031197" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/fsd-architecture" />
+                    <option name="lastUsedInstant" value="1736765729" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/scss-migration" />
@@ -79,10 +80,6 @@
                   <RecentBranch>
                     <option name="branchName" value="feature/pagination" />
                     <option name="lastUsedInstant" value="1735797003" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/fetch-api" />
-                    <option name="lastUsedInstant" value="1735132912" />
                   </RecentBranch>
                 </list>
               </option>
@@ -115,7 +112,7 @@
     "Node.js.TodoListView.jsx.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "#15 on feature/fsd-architecture",
+    "git-widget-placeholder": "feature/redux-add",
     "last_opened_file_path": "/Users/admin/.ssh/react-app.io/src/components/Todo",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
@@ -187,7 +184,9 @@
       <workItem from="1736344212793" duration="3130000" />
       <workItem from="1736491237772" duration="13885000" />
       <workItem from="1736765257004" duration="3328000" />
-      <workItem from="1736771297086" duration="2139000" />
+      <workItem from="1736771297086" duration="3542000" />
+      <workItem from="1737030979232" duration="208000" />
+      <workItem from="1737031191746" duration="7727000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -317,7 +316,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736768430351</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Изменение структуры FSD">
+      <option name="closed" value="true" />
+      <created>1736773505248</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1736773505248</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Изменение структуры FSD">
+      <option name="closed" value="true" />
+      <created>1736773553719</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1736773553719</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +349,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="feature/fsd-architecture" />
                       </list>
                     </value>
                   </entry>
@@ -361,6 +376,7 @@
     <MESSAGE value="Изменение наименования функций" />
     <MESSAGE value="Внедрение SCSS, изменение стилей" />
     <MESSAGE value="Внедрение архитектуры FSD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Внедрение архитектуры FSD" />
+    <MESSAGE value="Изменение структуры FSD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменение структуры FSD" />
   </component>
 </project>
