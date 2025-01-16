@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-const TodoList = ({ tasks = [], day}) => {
+const TodoStats = ({ tasks = [], day}) => {
     const completedTasks = tasks.filter(task => task.isActive).length;
     const totalTasks = tasks.length;
 
@@ -33,4 +33,4 @@ const TodoList = ({ tasks = [], day}) => {
     );
 };
 
-export {TodoList};
+export {TodoStats};
