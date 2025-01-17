@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="add action,reducer,selector">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение логики Tasks при помощи Redux">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks.action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks.selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks.selector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/tasks.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/tasks.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store/tasks.selector.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +138,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.120" />
       </set>
     </attachedChunks>
   </component>
@@ -186,7 +187,9 @@
       <workItem from="1737031191746" duration="7727000" />
       <workItem from="1737044906807" duration="256000" />
       <workItem from="1737053899506" duration="4122000" />
-      <workItem from="1737095299469" duration="4161000" />
+      <workItem from="1737095299469" duration="5312000" />
+      <workItem from="1737125612175" duration="1826000" />
+      <workItem from="1737131315789" duration="1640000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -340,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737045012686</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Изменение логики Tasks при помощи Redux">
+      <option name="closed" value="true" />
+      <created>1737112482635</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1737112482635</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +368,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature/fsd-architecture" />
+                        <option value="origin/feature/redux-add" />
                       </list>
                     </value>
                   </entry>
@@ -386,6 +397,7 @@
     <MESSAGE value="Внедрение архитектуры FSD" />
     <MESSAGE value="Изменение структуры FSD" />
     <MESSAGE value="add action,reducer,selector" />
-    <option name="LAST_COMMIT_MESSAGE" value="add action,reducer,selector" />
+    <MESSAGE value="Изменение логики Tasks при помощи Redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменение логики Tasks при помощи Redux" />
   </component>
 </project>

@@ -6,27 +6,35 @@ import { ButtonAddTask } from "../../shared/ui/button/add-button/ButtonAddTask";
 import { MyModal } from "../../shared/ui/modal/MyModal";
 import { SelectFilterButton } from "../../shared/ui/button/select-button/SelectFilterButton";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFilteredTasks } from "../../app/store/tasks.selector";
 import {filteredTasksByDay} from "../helpers/helpers";
+import {
+    addTask,
+    editTask,
+    filterTask,
+    removeTask,
+    selectFilteredTasks,
+    selectFilterTask,
+    toggleTask
+} from "../../app/store/tasks";
 
 const TodoList = ({ day }) => {
     const dispatch = useDispatch();
     const tasks = useSelector(selectFilteredTasks);
-    const filter = useSelector((state) => state.tasks.filter);
+    const filter = useSelector(selectFilterTask);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [quantityPage, setQuantityPage] = useState(0);
     const [openEditModal, setEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState({});
 
-    const filteredTasks = useMemo(() => filteredTasksByDay(tasks, day), [tasks, day]);
+    const filteredTasks =  filteredTasksByDay(tasks, day);
 
     const deleteTask = (id) => {
-        dispatch({ type: "REMOVE_TASK", payload: { id } });
+        dispatch(removeTask(id));
     };
 
     const toggleTaskStatus = (id) => {
-        dispatch({ type: "TOGGLE_TASK", payload: { id } });
+        dispatch(toggleTask(id));
     };
 
     const handleModalOpen = (task = { title: "", date: new Date() }) => {
@@ -41,30 +49,21 @@ const TodoList = ({ day }) => {
 
     const addOrUpdateTask = (task) => {
         if (task.id) {
-            dispatch({ type: "EDIT_TASK", payload: task });
+            dispatch(editTask(task));
         } else {
-            dispatch({
-                type: "ADD_TASK",
-                payload: {
-                    id: Date.now(),
-                    title: task.title,
-                    description: task.description,
-                    isActive: false,
-                    date: new Date().toISOString(),
-                },
-            });
+            dispatch(addTask(task));
         }
     };
 
-    const selectFilter = (filter) => {
-        dispatch({ type: "FILTER_TASK", payload: { filter } });
+    const filterTasks = (filter) => {
+        dispatch(filterTask(filter));
     };
 
     return (
         <Container>
             <TodoStats tasks={filteredTasks} day={day} />
             <Box className="box-select-button">
-                <SelectFilterButton onFilterChange={selectFilter} filter={filter} />
+                <SelectFilterButton onFilterChange={filterTasks} filter={filter} />
             </Box>
             {filteredTasks.map((task) => (
                 <TodoTask
