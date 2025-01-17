@@ -1,59 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { Box, Container, Pagination } from "@mui/material";
 import { TodoStats } from "../todo-stats/TodoStats";
 import { TodoTask } from "../../shared/ui/todo/Todo";
 import { ButtonAddTask } from "../../shared/ui/button/add-button/ButtonAddTask";
 import { MyModal } from "../../shared/ui/modal/MyModal";
-import { fetchTodos } from "../../shared/api/api";
-import { filteredTasksByDay } from "../helpers/helpers";
 import { SelectFilterButton } from "../../shared/ui/button/select-button/SelectFilterButton";
+import { useDispatch, useSelector } from "react-redux";
+import { selectFilteredTasks } from "../../app/store/tasks.selector";
+import {filteredTasksByDay} from "../helpers/helpers";
 
 const TodoList = ({ day }) => {
-    const [tasks, setTasks] = useState([]);
+    const dispatch = useDispatch();
+    const tasks = useSelector(selectFilteredTasks);
+    const filter = useSelector((state) => state.tasks.filter);
+
     const [currentPage, setCurrentPage] = useState(1);
     const [quantityPage, setQuantityPage] = useState(0);
-    const [selectedFilterTasks, setSelectedFilterTasks] = useState([]);
-    const [filter, setFilter] = useState("all");
     const [openEditModal, setEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState({});
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const { tasks, totalCount } = await fetchTodos(currentPage);
-                setTasks(tasks);
-                setSelectedFilterTasks(tasks);
-                const totalPages = Math.ceil(totalCount / 10);
-                setQuantityPage(totalPages);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        fetchData();
-    }, [currentPage]);
-
-    const applyFilter = (tasks) => {
-        if (filter === "all") {
-            setSelectedFilterTasks(tasks);
-        } else if (filter === "active") {
-            setSelectedFilterTasks(tasks.filter((task) => !task.isActive));
-        } else if (filter === "completed") {
-            setSelectedFilterTasks(tasks.filter((task) => task.isActive));
-        }
-    };
+    const filteredTasks = useMemo(() => filteredTasksByDay(tasks, day), [tasks, day]);
 
     const deleteTask = (id) => {
-        const updatedTasks = tasks.filter((task) => task.id !== id);
-        setTasks(updatedTasks);
-        applyFilter(updatedTasks);
+        dispatch({ type: "REMOVE_TASK", payload: { id } });
     };
 
     const toggleTaskStatus = (id) => {
-        const updatedTasks = tasks.map((task) =>
-            task.id === id ? { ...task, isActive: !task.isActive } : task
-        );
-        setTasks(updatedTasks);
-        applyFilter(updatedTasks);
+        dispatch({ type: "TOGGLE_TASK", payload: { id } });
     };
 
     const handleModalOpen = (task = { title: "", date: new Date() }) => {
@@ -67,27 +40,30 @@ const TodoList = ({ day }) => {
     };
 
     const addOrUpdateTask = (task) => {
-        let updatedTasks;
         if (task.id) {
-            updatedTasks = tasks.map((t) => (t.id === task.id ? task : t));
+            dispatch({ type: "EDIT_TASK", payload: task });
         } else {
-            updatedTasks = [...tasks, { ...task, id: Date.now(), isActive: false }];
+            dispatch({
+                type: "ADD_TASK",
+                payload: {
+                    id: Date.now(),
+                    title: task.title,
+                    description: task.description,
+                    isActive: false,
+                    date: new Date().toISOString(),
+                },
+            });
         }
-        setTasks(updatedTasks);
-        applyFilter(updatedTasks);
     };
 
     const selectFilter = (filter) => {
-        setFilter(filter);
-        applyFilter(tasks);
+        dispatch({ type: "FILTER_TASK", payload: { filter } });
     };
-
-    const filteredTasks = filteredTasksByDay(selectedFilterTasks, day);
 
     return (
         <Container>
             <TodoStats tasks={filteredTasks} day={day} />
-            <Box className='box-select-button'>
+            <Box className="box-select-button">
                 <SelectFilterButton onFilterChange={selectFilter} filter={filter} />
             </Box>
             {filteredTasks.map((task) => (
@@ -101,7 +77,7 @@ const TodoList = ({ day }) => {
             ))}
             <ButtonAddTask setOpenModal={() => handleModalOpen()} />
             <Pagination
-                className='pagination'
+                className="pagination"
                 variant="outlined"
                 count={quantityPage}
                 page={currentPage}
