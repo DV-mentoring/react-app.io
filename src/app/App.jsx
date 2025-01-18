@@ -1,6 +1,6 @@
 import './styles/style.css'
 import { BrowserRouter as Router } from "react-router-dom";
-import {Sidebar} from './components/Sidebar/Sidebar'
+import {Sidebar} from '../shared/ui/sidebar/Sidebar'
 
 function App() {
   return (

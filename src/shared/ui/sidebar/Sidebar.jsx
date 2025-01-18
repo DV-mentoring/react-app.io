@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState} from "react";
 import { Routes, Route } from "react-router-dom";
-import { TodoListView } from "../Todo/TodoListView";
+import { TodoList } from "../../../features/todo-list/TodoList";
 import { NavLink } from "react-router-dom";
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -22,7 +22,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import UpcomingIcon from '@mui/icons-material/Upcoming';
 
-import { Drawer, AppBar, DrawerHeader } from '../../styles/sidebar.styles';
+import { Drawer, AppBar, DrawerHeader } from './model/sidebar.styles';
 
 
 
@@ -120,9 +120,9 @@ export function Sidebar() {
                 <DrawerHeader />
                 <Typography>
                     <Routes>
-                        <Route path="/" element={<TodoListView day={"Today"}/>} />
-                        <Route path="/Yesterday" element={<TodoListView day={"Yesterday"}/>} />
-                        <Route path="/Upcoming" element={<TodoListView day={"Upcoming"}/>} />
+                        <Route path="/" element={<TodoList day={"Today"}/>} />
+                        <Route path="/Yesterday" element={<TodoList day={"Yesterday"}/>} />
+                        <Route path="/Upcoming" element={<TodoList day={"Upcoming"}/>} />
                     </Routes>
                 </Typography>
             </Box>
