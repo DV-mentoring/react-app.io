@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, {useState,useEffect} from "react";
 import { Box, Container, Pagination } from "@mui/material";
 import { TodoStats } from "../todo-stats/TodoStats";
 import { TodoTask } from "../../shared/ui/todo/Todo";
@@ -7,17 +7,13 @@ import { MyModal } from "../../shared/ui/modal/MyModal";
 import { SelectFilterButton } from "../../shared/ui/button/select-button/SelectFilterButton";
 import { useDispatch, useSelector } from "react-redux";
 import {filteredTasksByDay} from "../helpers/helpers";
-import {
-    addTask,
-    editTask,
-    filterTask,
-    removeTask,
-    selectFilteredTasks,
-    selectFilterTask,
-    toggleTask
-} from "../../app/store/tasks";
+import {selectFilteredTasks, selectFilterTask} from "../../app/store/tasks/selectors";
+import {addTask, editTask, filterTask, removeTask, toggleTask} from "../../app/store/tasks/actions";
+import {fetchTasks} from "../../shared/api/api";
+
 
 const TodoList = ({ day }) => {
+
     const dispatch = useDispatch();
     const tasks = useSelector(selectFilteredTasks);
     const filter = useSelector(selectFilterTask);
@@ -26,8 +22,12 @@ const TodoList = ({ day }) => {
     const [quantityPage, setQuantityPage] = useState(0);
     const [openEditModal, setEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState({});
-
     const filteredTasks =  filteredTasksByDay(tasks, day);
+
+
+    useEffect(() => {
+        dispatch(fetchTasks({ currentPage: 1, limit: 10 }));
+    }, [dispatch]);
 
     const deleteTask = (id) => {
         dispatch(removeTask(id));
