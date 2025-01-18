@@ -8,7 +8,7 @@ import { SelectFilterButton } from "../../shared/ui/button/select-button/SelectF
 import { useDispatch, useSelector } from "react-redux";
 import {filteredTasksByDay} from "../helpers/helpers";
 import {selectFilteredTasks, selectFilterTask} from "../../app/store/tasks/selectors";
-import {addTask, editTask, filterTask, removeTask, toggleTask} from "../../app/store/tasks/actions";
+import {addTask, editTask, filterTask, removeTask, toggleTask} from "../../app/store/tasks/taskSlice";
 import {fetchTasks} from "../../shared/api/api";
 
 
@@ -22,12 +22,16 @@ const TodoList = ({ day }) => {
     const [quantityPage, setQuantityPage] = useState(0);
     const [openEditModal, setEditModal] = useState(false);
     const [currentTask, setCurrentTask] = useState({});
-    const filteredTasks =  filteredTasksByDay(tasks, day);
+    const filteredTasks =  filteredTasksByDay(tasks || [], day);
 
 
     useEffect(() => {
-        dispatch(fetchTasks({ currentPage: 1, limit: 10 }));
-    }, [dispatch]);
+        dispatch(fetchTasks({ currentPage, limit: 10 })).then((result) => {
+            if (result.payload) {
+                setQuantityPage(Math.ceil(result.payload.totalCount / 10));
+            }
+        });
+    }, [dispatch, currentPage]);
 
     const deleteTask = (id) => {
         dispatch(removeTask(id));

@@ -1,17 +1,37 @@
+import { createSlice } from '@reduxjs/toolkit';
 import {fetchTasks} from "../../../shared/api/api";
-import {createSlice} from "@reduxjs/toolkit";
 
-const initialState = {
-    tasks: [],
-    totalCount: 0,
-    isLoading: false,
-    error: '',
-};
 
 export const tasksSlice = createSlice({
     name: 'tasks',
-    initialState,
-    reducers: {},
+    initialState: {
+        tasks: [],
+        totalCount: 0,
+        isLoading: false,
+        error: '',
+        filter: 'all',
+    },
+    reducers: {
+        addTask: (state, action) => {
+            state.tasks.push(action.payload);
+        },
+        removeTask: (state, action) => {
+            state.tasks = state.tasks.filter((task) => task.id !== action.payload);
+        },
+        toggleTask: (state, action) => {
+            state.tasks = state.tasks.map((task) =>
+                task.id === action.payload ? { ...task, isActive: !task.isActive } : task
+            );
+        },
+        editTask: (state, action) => {
+            state.tasks = state.tasks.map((task) =>
+                task.id === action.payload.id ? { ...task, ...action.payload } : task
+            );
+        },
+        filterTask: (state, action) => {
+            state.filter = action.payload;
+        },
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchTasks.pending, (state) => {
@@ -31,3 +51,4 @@ export const tasksSlice = createSlice({
 });
 
 export const taskReducer = tasksSlice.reducer;
+export const { addTask, removeTask, toggleTask, editTask, filterTask } = tasksSlice.actions;
