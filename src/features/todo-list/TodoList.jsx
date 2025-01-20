@@ -24,9 +24,11 @@ const TodoList = ({ day }) => {
     const [currentTask, setCurrentTask] = useState({});
     const filteredTasks =  filteredTasksByDay(tasks || [], day);
 
+    const limitRenderedTasks = 10;
+
 
     useEffect(() => {
-        dispatch(fetchTasks({ currentPage, limit: 10 })).then((result) => {
+        dispatch(fetchTasks({ currentPage, limit: limitRenderedTasks })).then((result) => {
             if (result.payload) {
                 setQuantityPage(Math.ceil(result.payload.totalCount / 10));
             }

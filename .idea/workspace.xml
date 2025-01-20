@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Получение данных с бека">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Исправление метода получения данных с бекенда">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks/reducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks/selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks/taskSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks/taskSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +187,7 @@
       <workItem from="1737131315789" duration="2460000" />
       <workItem from="1737183784510" duration="5244000" />
       <workItem from="1737205609528" duration="4402000" />
-      <workItem from="1737222543058" duration="1923000" />
+      <workItem from="1737222543058" duration="3262000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -370,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737206909897</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Исправление метода получения данных с бекенда">
+      <option name="closed" value="true" />
+      <created>1737224808737</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1737224808738</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,6 +422,7 @@
     <MESSAGE value="Изменение логики Tasks при помощи Redux" />
     <MESSAGE value="Изменение логики функций, объединение reducers/actions/selectors" />
     <MESSAGE value="Получение данных с бека" />
-    <option name="LAST_COMMIT_MESSAGE" value="Получение данных с бека" />
+    <MESSAGE value="Исправление метода получения данных с бекенда" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление метода получения данных с бекенда" />
   </component>
 </project>
