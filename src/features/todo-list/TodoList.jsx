@@ -10,6 +10,7 @@ import {filteredTasksByDay} from "../helpers/helpers";
 import {selectFilteredTasks, selectFilterTask} from "../../app/store/tasks/selectors";
 import {addTask, editTask, filterTask, removeTask, toggleTask} from "../../app/store/tasks/taskSlice";
 import {fetchTasks} from "../../shared/api/api";
+import {LIMIT_RENDERED_TASKS} from "../helpers/constants";
 
 
 const TodoList = ({ day }) => {
@@ -24,13 +25,11 @@ const TodoList = ({ day }) => {
     const [currentTask, setCurrentTask] = useState({});
     const filteredTasks =  filteredTasksByDay(tasks || [], day);
 
-    const limitRenderedTasks = 10;
-
 
     useEffect(() => {
-        dispatch(fetchTasks({ currentPage, limit: limitRenderedTasks })).then((result) => {
+        dispatch(fetchTasks({ currentPage,limit: LIMIT_RENDERED_TASKS })).then((result) => {
             if (result.payload) {
-                setQuantityPage(Math.ceil(result.payload.totalCount / 10));
+                setQuantityPage(Math.ceil(result.payload.totalCount / LIMIT_RENDERED_TASKS));
             }
         });
     }, [dispatch, currentPage]);

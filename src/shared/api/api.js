@@ -1,6 +1,5 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-
-const BASE_URL = 'https://jsonplaceholder.typicode.com/';
+import {BASE_URL} from "../../features/helpers/constants";
 
 export const fetchTasks = createAsyncThunk(
     'tasks/fetchTasks',
