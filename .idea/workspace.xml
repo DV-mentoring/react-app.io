@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="перевод структуры c js/jsx на ts/tsx, настройка ts.config">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="настройка prettier, husky hook pre-commit">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +112,7 @@
     "Node.js.TodoListView.jsx.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "#20 on feature/migration-ts",
     "js.linters.configure.manually.selectedeslint": "true",
     "last_opened_file_path": "/Users/admin/.ssh/react-app.io/src/components/Todo",
@@ -120,7 +124,8 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Errors",
+    "prettierjs.PrettierConfiguration.Package": "/Users/admin/.ssh/react-app.io/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/admin/.ssh/react-app.io/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -195,6 +200,7 @@
       <workItem from="1737397613772" duration="296000" />
       <workItem from="1737439794181" duration="818000" />
       <workItem from="1737440622126" duration="1753000" />
+      <workItem from="1737442381277" duration="5822000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -364,7 +370,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737397882783</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="настройка prettier, husky hook pre-commit">
+      <option name="closed" value="true" />
+      <created>1737455750305</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1737455750305</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,6 +426,7 @@
     <MESSAGE value="add action,reducer,selector" />
     <MESSAGE value="Изменение логики Tasks при помощи Redux" />
     <MESSAGE value="перевод структуры c js/jsx на ts/tsx, настройка ts.config" />
-    <option name="LAST_COMMIT_MESSAGE" value="перевод структуры c js/jsx на ts/tsx, настройка ts.config" />
+    <MESSAGE value="настройка prettier, husky hook pre-commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="настройка prettier, husky hook pre-commit" />
   </component>
 </project>
