@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Создание переменной limitRenderedTask">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="настройка prettier, husky hook pre-commit">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,7 @@
         <option value="JSX File" />
         <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
@@ -56,8 +62,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature/migration-ts" />
+                    <option name="lastUsedInstant" value="1737394729" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="feature/redux-add" />
-                    <option name="lastUsedInstant" value="1737386660" />
+                    <option name="lastUsedInstant" value="1737031226" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="dev" />
@@ -70,10 +80,6 @@
                   <RecentBranch>
                     <option name="branchName" value="feature/scss-migration" />
                     <option name="lastUsedInstant" value="1736318237" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/pagination" />
-                    <option name="lastUsedInstant" value="1735797003" />
                   </RecentBranch>
                 </list>
               </option>
@@ -101,34 +107,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.TodoListView.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;#18 on feature/redux-add&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/admin/.ssh/react-app.io/src/components/Todo&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.TodoListView.jsx.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "#20 on feature/migration-ts",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/Users/admin/.ssh/react-app.io/src/components/Todo",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/admin/.ssh/react-app.io/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/admin/.ssh/react-app.io/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/Todo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/store/tasks" />
       <recent name="$PROJECT_DIR$/src/shared/ui" />
       <recent name="$PROJECT_DIR$/src/features/helpers" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/pages/upcoming" />
+      <recent name="$PROJECT_DIR$/src/pages/yesterday" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -185,11 +196,11 @@
       <workItem from="1737053899506" duration="4122000" />
       <workItem from="1737095299469" duration="5312000" />
       <workItem from="1737125612175" duration="1826000" />
-      <workItem from="1737131315789" duration="2460000" />
-      <workItem from="1737183784510" duration="5244000" />
-      <workItem from="1737205609528" duration="4402000" />
-      <workItem from="1737222543058" duration="3262000" />
-      <workItem from="1737393367639" duration="311000" />
+      <workItem from="1737131315789" duration="1640000" />
+      <workItem from="1737397613772" duration="296000" />
+      <workItem from="1737439794181" duration="818000" />
+      <workItem from="1737440622126" duration="1753000" />
+      <workItem from="1737442381277" duration="5822000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -351,31 +362,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737112482635</updated>
     </task>
-    <task id="LOCAL-00021" summary="Изменение логики функций, объединение reducers/actions/selectors">
+    <task id="LOCAL-00021" summary="перевод структуры c js/jsx на ts/tsx, настройка ts.config">
       <option name="closed" value="true" />
-      <created>1737133143799</created>
+      <created>1737397882783</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1737133143799</updated>
+      <updated>1737397882783</updated>
     </task>
-    <task id="LOCAL-00022" summary="Получение данных с бека">
+    <task id="LOCAL-00022" summary="настройка prettier, husky hook pre-commit">
       <option name="closed" value="true" />
-      <created>1737206909897</created>
+      <created>1737455750305</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1737206909897</updated>
+      <updated>1737455750305</updated>
     </task>
-    <task id="LOCAL-00023" summary="Исправление метода получения данных с бекенда">
-      <option name="closed" value="true" />
-      <created>1737224808737</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1737224808738</updated>
-    </task>
-    <option name="localTasksCounter" value="24" />
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,9 +425,8 @@
     <MESSAGE value="Изменение структуры FSD" />
     <MESSAGE value="add action,reducer,selector" />
     <MESSAGE value="Изменение логики Tasks при помощи Redux" />
-    <MESSAGE value="Изменение логики функций, объединение reducers/actions/selectors" />
-    <MESSAGE value="Получение данных с бека" />
-    <MESSAGE value="Исправление метода получения данных с бекенда" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправление метода получения данных с бекенда" />
+    <MESSAGE value="перевод структуры c js/jsx на ts/tsx, настройка ts.config" />
+    <MESSAGE value="настройка prettier, husky hook pre-commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="настройка prettier, husky hook pre-commit" />
   </component>
 </project>
