@@ -4,28 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение логики Tasks при помощи Redux">
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="перевод структуры c js/jsx на ts/tsx, настройка ts.config">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks/taskSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks/taskSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/helpers/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/helpers/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/helpers/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/helpers/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo-list/TodoList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/TodoList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo-stats/TodoStats.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-stats/TodoStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/upcoming/Upcoming.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/upcoming/Upcoming.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/yesterday/Yesterday.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/yesterday/Yesterday.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/ui/button/add-button/ButtonAddTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/button/add-button/ButtonAddTask.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/ui/button/select-button/SelectFilterButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/button/select-button/SelectFilterButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/ui/modal/MyModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/modal/MyModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/ui/sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/sidebar/Sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/ui/todo/Todo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/todo/Todo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,15 +109,18 @@
     "Node.js.TodoListView.jsx.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/migration-ts",
+    "git-widget-placeholder": "#20 on feature/migration-ts",
+    "js.linters.configure.manually.selectedeslint": "true",
     "last_opened_file_path": "/Users/admin/.ssh/react-app.io/src/components/Todo",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "Errors",
     "ts.external.directory.path": "/Users/admin/.ssh/react-app.io/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -206,6 +192,9 @@
       <workItem from="1737095299469" duration="5312000" />
       <workItem from="1737125612175" duration="1826000" />
       <workItem from="1737131315789" duration="1640000" />
+      <workItem from="1737397613772" duration="296000" />
+      <workItem from="1737439794181" duration="818000" />
+      <workItem from="1737440622126" duration="1753000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -367,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737112482635</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="перевод структуры c js/jsx на ts/tsx, настройка ts.config">
+      <option name="closed" value="true" />
+      <created>1737397882783</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1737397882783</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,6 +411,7 @@
     <MESSAGE value="Изменение структуры FSD" />
     <MESSAGE value="add action,reducer,selector" />
     <MESSAGE value="Изменение логики Tasks при помощи Redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменение логики Tasks при помощи Redux" />
+    <MESSAGE value="перевод структуры c js/jsx на ts/tsx, настройка ts.config" />
+    <option name="LAST_COMMIT_MESSAGE" value="перевод структуры c js/jsx на ts/tsx, настройка ts.config" />
   </component>
 </project>
