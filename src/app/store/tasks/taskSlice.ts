@@ -1,54 +1,74 @@
-import { createSlice } from '@reduxjs/toolkit';
-import {fetchTasks} from "../../../shared/api/api";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { fetchTasks, ITask } from '../../../shared/api/api'
 
+interface IInitialState {
+    tasks: ITask[]
+    totalCount: number
+    isLoading: boolean
+    error: string | unknown
+    filter: 'all' | 'active' | 'completed'
+}
+
+const initialState: IInitialState = {
+    tasks: [],
+    totalCount: 0,
+    isLoading: false,
+    error: undefined,
+    filter: 'all',
+}
 
 export const tasksSlice = createSlice({
     name: 'tasks',
-    initialState: {
-        tasks: [],
-        totalCount: 0,
-        isLoading: false,
-        error: '',
-        filter: 'all',
-    },
+    initialState,
     reducers: {
-        addTask: (state, action) => {
-            state.tasks.push(action.payload);
+        addTask: (state, action: PayloadAction<ITask>) => {
+            state.tasks.push(action.payload)
+            console.log(action.payload)
         },
-        removeTask: (state, action) => {
-            state.tasks = state.tasks.filter((task) => task.id !== action.payload);
+        removeTask: (state, action: PayloadAction<number>) => {
+            state.tasks = state.tasks.filter(
+                (task) => task.id !== action.payload,
+            )
         },
-        toggleTask: (state, action) => {
+        toggleTask: (state, action: PayloadAction<number>) => {
             state.tasks = state.tasks.map((task) =>
-                task.id === action.payload ? { ...task, isActive: !task.isActive } : task
-            );
+                task.id === action.payload
+                    ? { ...task, isActive: !task.isActive }
+                    : task,
+            )
         },
-        editTask: (state, action) => {
+        editTask: (state, action: PayloadAction<ITask>) => {
             state.tasks = state.tasks.map((task) =>
-                task.id === action.payload.id ? { ...task, ...action.payload } : task
-            );
+                task.id === action.payload.id
+                    ? { ...task, ...action.payload }
+                    : task,
+            )
         },
-        filterTask: (state, action) => {
-            state.filter = action.payload;
+        filterTask: (
+            state,
+            action: PayloadAction<'all' | 'active' | 'completed'>,
+        ) => {
+            state.filter = action.payload
         },
     },
     extraReducers: (builder) => {
         builder
             .addCase(fetchTasks.pending, (state) => {
-                state.isLoading = true;
-                state.error = '';
+                state.isLoading = true
+                state.error = ''
             })
             .addCase(fetchTasks.fulfilled, (state, action) => {
-                state.isLoading = false;
-                state.tasks = action.payload.tasks;
-                state.totalCount = action.payload.totalCount;
+                state.isLoading = false
+                state.tasks = action.payload.tasks
+                state.totalCount = action.payload.totalCount
             })
             .addCase(fetchTasks.rejected, (state, action) => {
-                state.isLoading = false;
-                state.error = action.payload;
-            });
+                state.isLoading = false
+                state.error = action.payload
+            })
     },
-});
+})
 
-export const taskReducer = tasksSlice.reducer;
-export const { addTask, removeTask, toggleTask, editTask, filterTask } = tasksSlice.actions;
+export const taskReducer = tasksSlice.reducer
+export const { addTask, removeTask, toggleTask, editTask, filterTask } =
+    tasksSlice.actions
