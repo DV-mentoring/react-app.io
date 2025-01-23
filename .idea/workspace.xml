@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="миграция TypeScript, настройка типизации">
+    <list default="true" id="6613ebd9-c4dc-4cdb-a127-1743b247e392" name="Changes" comment="Изменение логики получения данных и модального окна">
+      <change afterPath="$PROJECT_DIR$/src/features/helpers/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store/tasks/selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store/tasks/selectors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/todo-list/TodoList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/todo-list/TodoList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/ui/modal/MyModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/ui/modal/MyModal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +202,7 @@
       <workItem from="1737480673105" duration="5047000" />
       <workItem from="1737559020518" duration="6793000" />
       <workItem from="1737572212601" duration="2777000" />
-      <workItem from="1737627918645" duration="3938000" />
+      <workItem from="1737627918645" duration="4961000" />
     </task>
     <task id="LOCAL-00001" summary="Изменение логики header">
       <option name="closed" value="true" />
@@ -399,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737573623780</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Изменение логики получения данных и модального окна">
+      <option name="closed" value="true" />
+      <created>1737632023831</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1737632023831</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,6 +455,7 @@
     <MESSAGE value="настройка prettier, husky hook pre-commit" />
     <MESSAGE value="изменение prettier" />
     <MESSAGE value="миграция TypeScript, настройка типизации" />
-    <option name="LAST_COMMIT_MESSAGE" value="миграция TypeScript, настройка типизации" />
+    <MESSAGE value="Изменение логики получения данных и модального окна" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменение логики получения данных и модального окна" />
   </component>
 </project>

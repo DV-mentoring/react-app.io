@@ -21,6 +21,7 @@ import {
 import { fetchTasks, IFetchTasksResponse, ITask } from '../../shared/api/api'
 import { LIMIT_RENDERED_TASKS } from '../helpers/constants'
 import { AppDispatch } from '../../app/store/store'
+import { filterType } from '../helpers/types'
 
 interface ITodoListProps {
     day: string
@@ -29,10 +30,7 @@ interface ITodoListProps {
 const TodoList: FC<ITodoListProps> = ({ day }) => {
     const dispatch = useDispatch<AppDispatch>()
     const tasks: ITask[] = useSelector(selectFilteredTasks)
-    const filter = useSelector(selectFilterTask) as
-        | 'all'
-        | 'active'
-        | 'completed'
+    const filter = useSelector(selectFilterTask) as filterType
 
     const [currentPage, setCurrentPage] = useState<number>(1)
     const [quantityPage, setQuantityPage] = useState<number>(0)
@@ -85,12 +83,13 @@ const TodoList: FC<ITodoListProps> = ({ day }) => {
                 addTask({
                     ...task,
                     id: Date.now(),
+                    isActive: false,
                 } as ITask),
             )
         }
     }
 
-    const filterTasks = (filter: 'all' | 'active' | 'completed') => {
+    const filterTasks = (filter: filterType) => {
         dispatch(filterTask(filter))
     }
 
