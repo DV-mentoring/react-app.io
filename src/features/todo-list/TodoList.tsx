@@ -37,7 +37,7 @@ const TodoList: FC<ITodoListProps> = ({ day }) => {
     const [currentPage, setCurrentPage] = useState<number>(1)
     const [quantityPage, setQuantityPage] = useState<number>(0)
     const [openEditModal, setEditModal] = useState<boolean>(false)
-    const [currentTask, setCurrentTask] = useState<ITask | null>(null) //{}
+    const [currentTask, setCurrentTask] = useState<Partial<ITask> | null>(null) //{}
     const filteredTasks: ITask[] = filteredTasksByDay(tasks || [], day)
 
     useEffect(() => {
@@ -67,7 +67,6 @@ const TodoList: FC<ITodoListProps> = ({ day }) => {
                 title: '',
                 date: new Date().toISOString(),
                 isActive: true,
-                id: Date.now(),
             },
         )
         setEditModal(true)
@@ -80,9 +79,14 @@ const TodoList: FC<ITodoListProps> = ({ day }) => {
 
     const addOrUpdateTask = (task: ITask) => {
         if (task.id) {
-            dispatch(editTask(task))
+            dispatch(editTask(task as ITask))
         } else {
-            dispatch(addTask(task))
+            dispatch(
+                addTask({
+                    ...task,
+                    id: Date.now(),
+                } as ITask),
+            )
         }
     }
 
@@ -120,7 +124,7 @@ const TodoList: FC<ITodoListProps> = ({ day }) => {
                 openModal={openEditModal}
                 handleModalClose={handleModalClose}
                 initalTask={currentTask || {}}
-                onSubmit={addOrUpdateTask}
+                onSubmit={(task) => task && addOrUpdateTask(task as ITask)}
             />
         </Container>
     )

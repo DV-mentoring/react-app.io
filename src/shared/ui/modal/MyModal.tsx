@@ -6,7 +6,9 @@ import { Button, TextField } from '@mui/material'
 interface IMyModalProps {
     openModal: boolean
     handleModalClose: () => void
-    onSubmit: (task: any) => void
+    onSubmit: (
+        task: { title: string; description?: string } | undefined,
+    ) => void
     initalTask?: any
 }
 

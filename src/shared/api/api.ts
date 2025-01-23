@@ -9,6 +9,12 @@ export interface ITask {
     isActive: boolean
 }
 
+export interface IServerTask {
+    id: number
+    title: string
+    completed: boolean
+}
+
 export interface IFetchTasksParams {
     currentPage: number
     limit: number
@@ -31,11 +37,11 @@ export const fetchTasks = createAsyncThunk<
         const totalCount = response.headers.get('X-Total-Count')
         const data = await response.json()
         return {
-            tasks: data.map((task: ITask) => ({
+            tasks: data.map((task: IServerTask) => ({
                 id: task.id,
                 title: task.title,
                 date: new Date(),
-                isActive: !task.isActive,
+                isActive: task.completed,
             })),
             totalCount: Number(totalCount),
         }
