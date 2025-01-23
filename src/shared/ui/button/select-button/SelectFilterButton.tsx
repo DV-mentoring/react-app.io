@@ -1,9 +1,10 @@
 import { Button, ButtonGroup } from '@mui/material'
 import React, { useEffect } from 'react'
+import { filterType } from '../../../../features/helpers/types'
 
 interface ISelectFilterButtonProps {
-    onFilterChange: (filter: 'all' | 'active' | 'completed') => void
-    filter: 'all' | 'active' | 'completed'
+    onFilterChange: (filter: filterType) => void
+    filter: filterType
 }
 
 export function SelectFilterButton({
