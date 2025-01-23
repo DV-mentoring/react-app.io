@@ -1,76 +1,108 @@
-import React, {useState,useEffect} from "react";
-import { Box, Container, Pagination } from "@mui/material";
-import { TodoStats } from "../todo-stats/TodoStats";
-import { TodoTask } from "../../shared/ui/todo/Todo";
-import { ButtonAddTask } from "../../shared/ui/button/add-button/ButtonAddTask";
-import { MyModal } from "../../shared/ui/modal/MyModal";
-import { SelectFilterButton } from "../../shared/ui/button/select-button/SelectFilterButton";
-import { useDispatch, useSelector } from "react-redux";
-import {filteredTasksByDay} from "../helpers/helpers";
-import {selectFilteredTasks, selectFilterTask} from "../../app/store/tasks/selectors";
-import {addTask, editTask, filterTask, removeTask, toggleTask} from "../../app/store/tasks/taskSlice";
-import {fetchTasks} from "../../shared/api/api";
-import {LIMIT_RENDERED_TASKS} from "../helpers/constants";
+import React, { useState, useEffect, FC } from 'react'
+import { Box, Container, Pagination } from '@mui/material'
+import { TodoStats } from '../todo-stats/TodoStats'
+import { TodoTask } from '../../shared/ui/todo/Todo'
+import { ButtonAddTask } from '../../shared/ui/button/add-button/ButtonAddTask'
+import { MyModal } from '../../shared/ui/modal/MyModal'
+import { SelectFilterButton } from '../../shared/ui/button/select-button/SelectFilterButton'
+import { useDispatch, useSelector } from 'react-redux'
+import { filteredTasksByDay } from '../helpers/helpers'
+import {
+    selectFilteredTasks,
+    selectFilterTask,
+} from '../../app/store/tasks/selectors'
+import {
+    addTask,
+    editTask,
+    filterTask,
+    removeTask,
+    toggleTask,
+} from '../../app/store/tasks/taskSlice'
+import { fetchTasks, IFetchTasksResponse, ITask } from '../../shared/api/api'
+import { LIMIT_RENDERED_TASKS } from '../helpers/constants'
+import { AppDispatch } from '../../app/store/store'
+import { filterType } from '../helpers/types'
 
+interface ITodoListProps {
+    day: string
+}
 
-const TodoList = ({ day }) => {
+const TodoList: FC<ITodoListProps> = ({ day }) => {
+    const dispatch = useDispatch<AppDispatch>()
+    const tasks: ITask[] = useSelector(selectFilteredTasks)
+    const filter = useSelector(selectFilterTask) as filterType
 
-    const dispatch = useDispatch();
-    const tasks = useSelector(selectFilteredTasks);
-    const filter = useSelector(selectFilterTask);
-
-    const [currentPage, setCurrentPage] = useState(1);
-    const [quantityPage, setQuantityPage] = useState(0);
-    const [openEditModal, setEditModal] = useState(false);
-    const [currentTask, setCurrentTask] = useState({});
-    const filteredTasks =  filteredTasksByDay(tasks || [], day);
-
+    const [currentPage, setCurrentPage] = useState<number>(1)
+    const [quantityPage, setQuantityPage] = useState<number>(0)
+    const [openEditModal, setEditModal] = useState<boolean>(false)
+    const [currentTask, setCurrentTask] = useState<Partial<ITask> | null>(null) //{}
+    const filteredTasks: ITask[] = filteredTasksByDay(tasks || [], day)
 
     useEffect(() => {
-        dispatch(fetchTasks({ currentPage,limit: LIMIT_RENDERED_TASKS })).then((result) => {
-            if (result.payload) {
-                setQuantityPage(Math.ceil(result.payload.totalCount / LIMIT_RENDERED_TASKS));
-            }
-        });
-    }, [dispatch, currentPage]);
+        dispatch(fetchTasks({ currentPage, limit: LIMIT_RENDERED_TASKS })).then(
+            (result) => {
+                const payload = result.payload as IFetchTasksResponse
+                if (payload) {
+                    setQuantityPage(
+                        Math.ceil(payload.totalCount / LIMIT_RENDERED_TASKS),
+                    )
+                }
+            },
+        )
+    }, [dispatch, currentPage])
 
-    const deleteTask = (id) => {
-        dispatch(removeTask(id));
-    };
+    const deleteTask = (id: number) => {
+        dispatch(removeTask(id))
+    }
 
-    const toggleTaskStatus = (id) => {
-        dispatch(toggleTask(id));
-    };
+    const toggleTaskStatus = (id: number) => {
+        dispatch(toggleTask(id))
+    }
 
-    const handleModalOpen = (task = { title: "", date: new Date() }) => {
-        setCurrentTask(task);
-        setEditModal(true);
-    };
+    const handleModalOpen = (task?: ITask) => {
+        setCurrentTask(
+            task || {
+                title: '',
+                date: new Date().toISOString(),
+                isActive: true,
+            },
+        )
+        setEditModal(true)
+    }
 
     const handleModalClose = () => {
-        setEditModal(false);
-        setCurrentTask(null);
-    };
+        setEditModal(false)
+        setCurrentTask(null)
+    }
 
-    const addOrUpdateTask = (task) => {
+    const addOrUpdateTask = (task: ITask) => {
         if (task.id) {
-            dispatch(editTask(task));
+            dispatch(editTask(task as ITask))
         } else {
-            dispatch(addTask(task));
+            dispatch(
+                addTask({
+                    ...task,
+                    id: Date.now(),
+                    isActive: false,
+                } as ITask),
+            )
         }
-    };
+    }
 
-    const filterTasks = (filter) => {
-        dispatch(filterTask(filter));
-    };
+    const filterTasks = (filter: filterType) => {
+        dispatch(filterTask(filter))
+    }
 
     return (
         <Container>
             <TodoStats tasks={filteredTasks} day={day} />
             <Box className="box-select-button">
-                <SelectFilterButton onFilterChange={filterTasks} filter={filter} />
+                <SelectFilterButton
+                    onFilterChange={filterTasks}
+                    filter={filter}
+                />
             </Box>
-            {filteredTasks.map((task) => (
+            {filteredTasks.map((task: ITask) => (
                 <TodoTask
                     key={task.id}
                     task={task}
@@ -91,10 +123,10 @@ const TodoList = ({ day }) => {
                 openModal={openEditModal}
                 handleModalClose={handleModalClose}
                 initalTask={currentTask || {}}
-                onSubmit={addOrUpdateTask}
+                onSubmit={(task) => task && addOrUpdateTask(task as ITask)}
             />
         </Container>
-    );
-};
+    )
+}
 
-export { TodoList };
+export { TodoList }
